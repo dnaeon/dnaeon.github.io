@@ -4,8 +4,6 @@ title: Disconnecting RDP sessions on a Windows(R) machine
 tags: rdp windows
 ---
 
-## General Information
-
 Sometimes when connecting to a Windows(R) machine you might see an
 error messsage saying that the maximum number of remote connections
 has exceeded.
@@ -79,12 +77,12 @@ following command:
 > rwinsta /server:example.com <session-id>
 ```
 
-So for example if we want to disconnect user ``foo``'s RDP session
+So for example if we want to disconnect user `foo`'s RDP session
 we would execute:
 
 ```PowerShell
 > rwinsta /server:example.com 2
 ```
 
-Executing the above command would disconnect user ``foo`` and make
+Executing the above command would disconnect user `foo` and make
 possible for others to connect to the remote machine again.
