@@ -1,3 +1,9 @@
+---
+layout: post
+title: Using Juniper Network Connect on GNU/Linux
+tags: juniper vpn linux network connect
+---
+
 Connecting to a Juniper VPN from a GNU/Linux system using Network
 Connect could be a bit tricky, so here are instructions on how to
 properly configure your GNU/Linux system for establishing connection
