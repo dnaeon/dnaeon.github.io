@@ -44,7 +44,7 @@ you've specified in your `/usr/local/etc/ezjail.conf` file.
 
 On the host machine where your jails are installed:
 
-```shell
+```bash
 $ cd ${ezjail_jaildir}/flavours
 $ sudo cp -a default TEST
 $ sudo cp -a default STABLE
@@ -86,7 +86,7 @@ first start the jail.
 In the `etc/rc.conf` file of the flavour add the following lines, so
 that the CFEngine Executor is enabled during boot-time:
 
-```shell
+```bash
 # Enable CFEngine Executor
 cf_execd_enable="YES"
 ```
@@ -97,7 +97,7 @@ In the `ezjail.conf` file add the following lines, which will just
 setup the correct timezone for the jails, symlink `/home` to
 `/usr/home`, and copy `cf-promises(8)` to the CFEngine trusted work directory.
 
-```shell
+```bash
 # symlink /home to /usr/home
 ln -s /usr/home /home
 
@@ -120,7 +120,7 @@ CFEngine policy server of the corresponding environment in the form of
 The `ppkeys` directory needs to be secure enough, 
 otherwise CFEngine will refuse to run, so change it's permissions now:
 
-```shell
+```bash
 $ sudo chmod -R 0600 ${ezjail_jaildir}/flavours/TEST/var/cfengine/ppkeys
 $ sudo chmod -R 0600 ${ezjail_jaildir}/flavours/STABLE/var/cfengine/ppkeys
 ```
@@ -131,13 +131,13 @@ like this for example.
 
 For the test environment:
 
-```shell
+```bash
 $ sudo ezjail-admin create -f TEST jail-test x.x.x.x
 ```
 
 For the production environment:
 
-```shell
+```bash
 $ sudo ezjail-admin create -f STABLE jail y.y.y.y
 ```
 
@@ -157,7 +157,7 @@ CFEngine policy server.
 
 On the jail system (client), create the authentication keys:
 
-```shell
+```bash
 $ sudp cf-key
 Making a key pair for cfengine, please wait, this could take a minute...
 ```
@@ -167,7 +167,7 @@ jail (client system) to your local machine and rename it to
 `root-x.x.x.x.pub`, where `x.x.x.x` is the jail's (client system) 
 IP address, then add the ppkey to the Git repository.
 
-```shell
+```bash
 $ cd ~/PROJECTS/cfengine/ppkeys
 $ cp /path/to/root-x.x.x.x.pub .
 $ git add .
@@ -184,7 +184,7 @@ environment (TEST or production one) and pull the changes.
 
 On the CFEngine policy server:
 
-```shell
+```bash
 cd /var/cfengine && git pull
 ```
 
@@ -210,7 +210,7 @@ runs it will simply do an update of our configurations.
 
 On the client machines:
 
-```shell
+```bash
 $ sudo cf-agent -v
 ```
 

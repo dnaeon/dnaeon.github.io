@@ -29,7 +29,7 @@ changes from there, which will later be pulled by the CFEngine server.
 So let's clone the empty Git repository to our local machine and start
 preparing the CFEngine configuration.
 
-```shell
+```bash
 $ mkdir -p ~/PROJECTS && cd ~/PROJECTS
 $ git clone <user>@git.example.org:/home/git/public/cfengine
 $ cd cfengine
@@ -66,7 +66,7 @@ promises, so we can extend CFEngine with more complex configuration.
 So let's start with preparing the configuration for the above files,
 and later we will extend our configuration to a more complex one.
 
-```shell
+```bash
 $ cd ~/PROJECTS/cfengine/inputs
 ```
 
@@ -673,7 +673,7 @@ prepared already need to be under the `inputs` directory,
 so considering that you are now in that directory, let's add the
 files to Git.
 
-```shell
+```bash
 $ git add .
 $ git commit -m "Initial commit of the CFEngine configuration"
 $ git push origin master
@@ -687,7 +687,7 @@ Now we are going to create a new branch in Git for our test
 environment and push the changes there as well,
 so that we have our `TEST` environment configuration prepared also.
 
-```shell
+```bash
 $ git checkout -b TEST
 ```
 
@@ -709,7 +709,7 @@ Once you are ready with the updates of the above configuration
 files, let's add them to the `TEST` branch of Git and push the
 changes to the remote repository.
 
-```shell
+```bash
 $ git add .
 $ git commit -m "Initial commit of the CFEngine configuration for TEST environment" 
 $ git push origin TEST
@@ -737,14 +737,14 @@ configuration there now.
 
 On the cfengine.example.org server (production policy server):
 
-```shell
+```bash
 # cd /var
 # git clone --branch master <username>@git.example.org:/home/git/public/cfengine
 ```
 
 On the cfengine-test.example.org server (test policy server):
 
-```shell
+```bash
 # cd /var
 # git clone --branch TEST <username>@git.example.org:/home/git/public/cfengine
 ```
@@ -761,7 +761,7 @@ public key of each client.
 
 To create the ppkeys on the policy servers, login to them and execute:
 
-```shell
+```bash
 # cf-key
 Making a key pair for cfengine, please wait, this could take a minute...
 ```
@@ -795,7 +795,7 @@ form, they will be automatically converted to the new form.
 
 Adding the public ppkey for the production CFEngine server:
 
-```shell
+```bash
 # cd ~/PROJECTS/cfengine
 # git checkout master
 # cp /path/to/root-x.x.x.x.pub ppkeys/
@@ -806,7 +806,7 @@ Adding the public ppkey for the production CFEngine server:
 
 Adding the public ppkey for the TEST CFEngine server:
 
-```shell
+```bash
 cd ~/PROJECTS/cfengine
 git checkout TEST
 cp /path/to/root-y.y.y.y.pub ppkeys/
@@ -819,7 +819,7 @@ Now, login to the test and production CFEngine policy servers,
 and update the Git repository of CFEngine, so that the
 ppkey is added as well.
 
-```shell
+```bash
 cd /var/cfengine && git pull
 ```
 
@@ -841,7 +841,7 @@ CFEngine tool-suite to `/var/cfengine/bin` directory.
 
 To validate your CFEngine promises, now execute:
 
-```shell
+```bash
 $ sudo cf-promises
 ```
 
@@ -858,7 +858,7 @@ and Executor on the policy servers during boot-time.
 
 To do this, add the following lines to your `/etc/rc.conf` file:
 
-```shell
+```bash
 # Enable CFEngine Executor
 cf_execd_enable="YES"
 
@@ -873,7 +873,7 @@ something for us.
 
 Login to the policy servers and then let's start up `cf-agent(8)`:
 
-```shell
+```bash
 $ sudo cf-agent -v
 ```
 

@@ -165,7 +165,7 @@ Now, create the jails, which will be our CFEngine 3 policy servers.
 In this handbook we will have two CFEngine 3 master servers - one for
 the test environment, and one for our production environment.
 
-```shell
+```bash
 $ sudo ezjail-admin create cfengine-test 192.168.0.1
 $ sudo ezjail-admin create cfengine 192.168.0.2
 ```
@@ -178,7 +178,7 @@ please refer to it's manual page.
 Now, that we have a FreeBSD jail, let's install the CFEngine 3
 package that we have built already in Tinderbox.
 
-```shell
+```bash
 $ sudo ezjail-admin console cfengine
 ```
 
@@ -192,7 +192,7 @@ repository we have in place already.
 So now let's install the Git and CFEngine 3 packages on our CFEngine 3
 master server.
 
-```shell
+```bash
 # setenv PACKAGEROOT ftp://ftp.example.org/
 # pkg_add -r git-1.7.4.3
 # pkg_add -r cfengine-3.1.4_1
@@ -215,7 +215,7 @@ CFEngine on our Git server.
 
 On the Git server:
 
-```shell
+```bash
 $ cd /home/git/public && mkdir cfengine
 $ cd cfengine && git init --bare --shared
 ```

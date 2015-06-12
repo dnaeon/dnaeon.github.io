@@ -247,7 +247,7 @@ Git repository.
 
 The */etc/rc.conf* file for each system under CFEngine control will be in the *masterfiles/rc.conf* directory in our Git repository.
 
-```shell
+```bash
 $ cd ~/PROJECTS/cfengine/masterfiles
 $ mkdir rc.conf && cd rc.conf
 ```
@@ -271,7 +271,7 @@ files of our systems to CFEngine, in this step we will add the
 The `/etc/resolv.conf` files will be in the `masterfiles/domain`
 directory in our Git repository.
 
-```shell
+```bash
 $ cd ~/PROJECTS/cfengine/masterfiles
 $ mkdir domain && cd domain
 ```
@@ -310,14 +310,14 @@ CFEngine policy server.
 
 To do so, login to the CFEngine policy server and execute:
 
-```shell
+```bash
 cd /var/cfengine && git pull
 ```
 
 Verify that the files you've added/updated are present and validate the
 new promises.
 
-```shell
+```bash
 $ sudo cf-promises -v
 ```
 

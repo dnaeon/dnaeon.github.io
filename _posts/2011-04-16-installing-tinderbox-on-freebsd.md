@@ -24,7 +24,7 @@ Assuming you have installed Apache webserver with PHP support already,
 as it is listed in the requirements, let's go ahead and
 install Tinderbox.
 
-```shell
+```bash
 $ cd /usr/ports/ports-mgmt/tinderbox-devel && sudo make install clean
 ```
 
@@ -39,7 +39,7 @@ port build.
 Once the installation of Tinderbox is over, you should see
 something similar:
 
-```shell
+```bash
 ===============================================================================
 ports-mgmt/tinderbox is now installed, but it requires some additional setup.
 
@@ -143,7 +143,7 @@ Here is how my configuration file looks like:
 
 Test the Apache configuration for errors:
 
-```shell
+```bash
 $ sudo apachectl configtest
 ```
 
@@ -151,7 +151,7 @@ If the output from the above command is `Syntax OK`,
 then reload Apache's configuration, otherwise you will need to check
 your configuration file again for errors.
 
-```shell
+```bash
 $ sudo apachectl graceful
 ```
 
@@ -214,7 +214,7 @@ installs in */usr/local/tinderbox*, which is our *${pb}*.
 First we will setup the configuration files and initialize the
 Tinderbox database.
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc Setup
 ```
 
@@ -228,7 +228,7 @@ Does this host have access to connect to the Tinderbox database as a database ad
 
 Now let's configure the web front-end of Tinderbox:
 
-```shell
+```bash
 $ cd ${pb}/scripts
 $ sudo cp webui/inc_ds.php.dist webui/inc_ds.php
 ```
@@ -250,7 +250,7 @@ $DB_PASS    = '<password>';
 
 Setup the `ds.ph` configuration file:
 
-```shell
+```bash
 $ cd ${pb}/scripts
 $ sudo cp ds.ph.dist ds.ph
 ```
@@ -273,7 +273,7 @@ $DBI_TYPE        = 'database';
 	
 Now let's create the Tinderbox database schema.
 
-```shell
+```bash
 $ cd ${pb}/scripts/sql
 $ ./genschema mysql | mysql -u tinderbox_user -p -h mysql.example.org tinderbox
 ```
@@ -286,7 +286,7 @@ In the above command:
 
 ## Setup of tinderbox.ph and inc_tinderbox.php
 
-```shell
+```bash
 $ cd ${pb}/scripts
 $ sudo cp tinderbox.ph.dist tinderbox.ph
 ```
@@ -317,7 +317,7 @@ $SHOWPORT_URI    = $TINDERBOX_URI . '/index.php?action=describe_port&id=';
 Further configuration of the web frontend of Tinderbox is done
 from the `${pb}/webui/inc_tinderbox.php` file.
 
-```shell
+```bash
 $ cd ${pb}/scripts/webui
 $ sudo cp inc_tinderbox.php.dist inc_tinderbox.php
 ```
@@ -329,7 +329,7 @@ needed changes - page title, page header, theme, etc..
 
 Now, let's initialize the Tinderbox:
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc init
 ```
 
@@ -347,14 +347,14 @@ install them.
 NOTE: In order to use the binary release sets, you will need to have
 [ftp/lftp](http://www.freshports.org/ftp/lftp/) installed.
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc createJail -j 8.2 -d "FreeBSD 8.2-RELEASE" -t 8.2-RELEASE -u LFTP -H ftp.freebsd.org
 ```
 
 In order to build a Tinderbox jail from sources, use the following
 form of creating the Tinderbox jails:
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc createJail -j 8.2 -d "FreeBSD 8.2-RELEASE" -t RELENG_8_2 -u CVSUP
 ```
 
@@ -379,13 +379,13 @@ amd64 machine, you will create the Tinderbox jail like this:
 
 Using binary release sets:
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc createJail -j 8.2-i386 -d "FreeBSD 8.2-RELEASE" -t 8.2-RELEASE -u LFTP -H ftp.freebsd.org -a i386
 ```
 
 Using sources:
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc createJail -j 8.2-i386 -d "FreeBSD 8.2-RELEASE" -t RELENG_8_2_0_RELEASE -u CVSUP -a i386
 ```
 
@@ -399,7 +399,7 @@ The file should be placed in `${pb}/scripts/etc/env/jail.<TinderboxJail>`
 So for example, if you've created a jail named `8.2-i386`, then your
 `${pb}/scripts/etc/env/jail.8.2-i386` file will look like this
 
-```shell
+```bash
 ARCH=i386
 ```
 
@@ -410,7 +410,7 @@ should put them in the above file as well.
 
 The next thing to do is to create a Ports Tree for our Tinderbox jails.
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc createPortsTree -p FreeBSD -d "FreeBSD Ports Tree" -w http://www.freebsd.org/cgi/cvsweb.cgi/ports/
 ```
 
@@ -424,7 +424,7 @@ tree. This is where packages are being built as well.
 Now let's create a build that combines in itself the 8.2 FreeBSD jail
 we've created and the full FreeBSD Ports Tree.
 
-```shell
+```bash
 $ cd ${pb}/scripts
 $ sudo ./tc createBuild -b 8.2-FreeBSD-i386 -j 8.2-i386 -p FreeBSD -d "8.2-RELEASE-i386 with FreeBSD Ports Collection"
 ```
@@ -442,7 +442,7 @@ add/queue ports for building.
 
 First let's create a user that we'll use to login to the web interface.
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc addUser -u {USER} -e {EMAIL} -p {PASSWORD} -w
 $ cd ${pb}/scripts && sudo ./tc setWwwAdmin -u {USER}
 ```
@@ -450,7 +450,7 @@ $ cd ${pb}/scripts && sudo ./tc setWwwAdmin -u {USER}
 In order to enable `tinderd` during boot-time, add the following lines
 to your `/etc/rc.conf` file:
 
-```shell
+```bash
 # Enable Tinderbox's tinderd daemon
 tinderd_enable="YES"
 tinderd_directory="/usr/local/tinderbox/scripts"
@@ -459,7 +459,7 @@ tinderd_flags="-nullfs"
 
 Now start the `tinderd` daemon:
 
-```shell
+```bash
 $ sudo /usr/local/etc/rc.d/tinderd start
 ```
 
@@ -467,7 +467,7 @@ $ sudo /usr/local/etc/rc.d/tinderd start
 
 In order to enable the caching of distfiles, execute the commands below:
 
-```shell
+```bash
 $ sudo mkdir /usr/local/tinderbox/distfiles
 $ cd ${pb}/scripts && sudo ./tc configDistfile -c /usr/local/tinderbox/distfiles
 ```
@@ -481,14 +481,14 @@ schedule a port build, or you can do this from the command-line.
 In order to build a port from the command-line, first add the
 port to the Tinderbox database.
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc addPort -b {BUILD} -d {PORT DIRECTORY}
 ```
 
 Now that the port is added to the database, we can build it
 using the `tinderBuild` command.
 
-```shell
+```bash
 $ cd ${pb}/scripts && sudo ./tc tinderbuild -nullfs -b {BUILD} {PORT DIRECTORY}
 ```
 
