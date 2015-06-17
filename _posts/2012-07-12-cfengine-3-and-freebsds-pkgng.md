@@ -2,7 +2,7 @@
 layout: post
 title: CFEngine 3 and FreeBSD's pkgng
 created: 1342099894
-tags: freebsd cfengine
+tags: freebsd cfengine programming
 ---
 In a previous [handbook about CFEngine 3 on FreeBSD](/node/13) we
 have seen how to install, configure and do configuration management
