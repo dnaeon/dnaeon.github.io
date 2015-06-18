@@ -40,7 +40,7 @@ The table below summarizes the methods used in previous versions and
 the new names as found in version 0.1.1.
 
 | Old Method           | New Method          | Description                                       |
-|----------------------|-------------------------------------------------------------------------|
+|----------------------|---------------------|---------------------------------------------------|
 | host.poll            | host.get            | Get properties of a HostSystem object (ESXi host) |
 | datastore.poll       | datastore.get       | Get properties of a Datastore object              |
 

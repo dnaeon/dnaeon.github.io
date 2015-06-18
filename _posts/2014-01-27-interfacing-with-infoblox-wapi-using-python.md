@@ -109,7 +109,7 @@ now see what the result was as well:
         "network_view": "default"
     }
 ]
-```python
+```
 
 From the output above you can see the networks we have in Infoblox,
 the network view and also the object reference for each `network`
@@ -129,7 +129,7 @@ In order to create a new Infoblox object you need to use the HTTP
 
 Let's check if the request was successful.
 
-```python
+```
 >>> r.status_code
 201
 ```

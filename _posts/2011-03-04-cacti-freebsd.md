@@ -193,7 +193,7 @@ Query OK, 0 rows affected (0.00 sec)
 
 mysql> FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.00 sec)
-</code>
+```
 
 Keep in mind that in the above SQL statements we define the following:
 
