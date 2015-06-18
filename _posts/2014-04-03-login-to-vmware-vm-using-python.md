@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Run commands inside VMware Virtual Machine using Python
-tags: python programming
+tags: python programming vmware virtualization
 ---
 In this post we will see how we can use the
 [Python vSphere API bindings](https://github.com/vmware/pyvmomi)
