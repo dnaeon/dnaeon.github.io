@@ -20,7 +20,7 @@ Each time a packet reaches a gateway, the gateway checks
 if the TTL of a packet is greater than one, reduces the TTL of the
 packet by one and transmits the packet to its next hop. If the TTL
 of a packet is one, then the gateway discards the packet and sends
-back a (Time exceeded)[https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Time_exceeded]
+back a [Time exceeded](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Time_exceeded)
 response to the source client informing it that the destination host
 could not be reached as the packet TTL has exceeded.
 
