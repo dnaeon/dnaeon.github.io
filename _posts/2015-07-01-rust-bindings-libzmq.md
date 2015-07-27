@@ -161,7 +161,7 @@ that now.
 ```bash
 $ cargo run
      Running `target/debug/libzmq-version`
-Installed ZeroMQ version is 4.1.2
+Installed ZeroMQ version is 4.2.0
 ```
 
 And that was easy!
