@@ -4,18 +4,20 @@ title: About
 permalink: /about/
 ---
 This site is a personal blog about
-[OSS](http://en.wikipedia.org/wiki/Open-source_software) and Operating
-Systems.
+[Open Source Software](http://en.wikipedia.org/wiki/Open-source_software),
+Operating Systems, Virtualization, Automation &
+Configuration Management.
 
-I'm working as Sr. System Administrator with experience in various
-UNIX and UNIX-like Operating Systems such as FreeBSD and GNU/Linux -
+I have experience in various UNIX and UNIX-like
+Operating Systems such as FreeBSD and GNU/Linux -
 Debian, Ubuntu, RHEL, CentOS, ArchLinux. I also have experience in
-programming with C, Python, Shell scripting and SQL.
+programming in C, Python, Rust and Shell scripting.
 
 My interests are mainly related to
-[OSS](http://en.wikipedia.org/wiki/Open-source_software), Operating
-Systems, Monitoring, Virtualization, Automation & Configuration
-Management.
+[Open Source Software](http://en.wikipedia.org/wiki/Open-source_software),
+Operating Systems, Monitoring, Virtualization, Automation & Configuration
+Management and these are the primary topics I like to write about in
+this blog.
 
 Favourite Operating Systems of choice:
 
