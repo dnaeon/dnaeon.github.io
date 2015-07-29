@@ -130,7 +130,7 @@ that we'll use throughout our library.
 ```rust
 extern crate libc;
 
-use std::ffi;
+use std::{ffi, mem};
 use libc::{c_char, c_int, c_uint, uint64_t,  c_double, malloc, strncpy};
 ```
 
@@ -488,13 +488,17 @@ As a last thing we will create another helper function that we can
 later use in our loadable modules for easy item creation.
 
 ```rust
-pub fn create_items(metrics: &Vec<Metric>) -> *const ZBX_METRIC {
+pub fn create_items(metrics: &Vec<Box<Metric>>) -> *const ZBX_METRIC {
     let items = metrics
         .iter()
         .map(|metric| metric.to_zabbix_item())
         .collect::<Vec<_>>();
 
-    items.as_ptr()
+    // XXX: leak items into the void
+    let ptr = items.as_ptr();
+    mem::forget(items);
+
+    ptr
 }
 ```
 
@@ -589,7 +593,7 @@ module at the top of our `src/lib.rs` file.
 extern crate zbx;
 extern crate rand;
 
-use std::str;
+use std::{boxed, mem, str};
 use rand::Rng;
 ```
 
@@ -630,11 +634,15 @@ Zabbix for item processing.
 #[no_mangle]
 pub extern fn zbx_module_item_list() -> *const zbx::ZBX_METRIC {
     let metrics = vec![
-        zbx::Metric::new("rust.echo", zbx::CF_HAVEPARAMS, rust_echo, ""),
-        zbx::Metric::new("rust.random", zbx::CF_NOPARAMS, rust_random, ""),
+        boxed::Box::new(zbx::Metric::new("rust.echo", zbx::CF_HAVEPARAMS, rust_echo, "")),
+        boxed::Box::new(zbx::Metric::new("rust.random", zbx::CF_NOPARAMS, rust_random, "")),
     ];
 
-    zbx::create_items(&metrics)
+    // XXX: Leak items into the void
+    let items = zbx::create_items(&metrics);
+    mem::forget(metrics);
+
+    items
 }
 ```
 
