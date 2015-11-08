@@ -21,20 +21,20 @@ already provide to our client systems.
 
 ```bash
 $ sudo pulp-admin rpm repo create \
-       	--repo-id=centos-7-x86_64-base \
+        --repo-id=centos-7-x86_64-base \
         --description 'CentOS 7 Base Repo' \
-	--display-name 'CentOS 7 Base Repo' \
-	--feed=http://mirror.centos.org/centos/7/os/x86_64/
+        --display-name 'CentOS 7 Base Repo' \
+        --feed=http://mirror.centos.org/centos/7/os/x86_64/
 ```
 
 And now we create a mirror of the `updates` repository.
 
 ```bash
 $ sudo pulp-admin rpm repo create \
-       	--repo-id=centos-7-x86_64-updates \
+        --repo-id=centos-7-x86_64-updates \
         --description 'CentOS 7 Updates Repo' \
-	--display-name 'CentOS 7 Updates Repo' \
-	--feed=http://mirror.centos.org/centos/7/updates/x86_64/
+        --display-name 'CentOS 7 Updates Repo' \
+        --feed=http://mirror.centos.org/centos/7/updates/x86_64/
 ```
 
 You might also consider creating mirrors for other repositories as
@@ -51,9 +51,9 @@ The command below creates a schedule for our CentOS 7 `base`
 repository to sync with the upstream repository once a day at midnight.
 
 ```bash
-$ sudo pulp-admin rpm repo sync schedules \
-       	create --schedule 2015-11-08T00:00:00Z/P1DT \
-	--repo-id centos-7-x86_64-base
+$ sudo pulp-admin rpm repo sync schedules create \
+        --schedule 2015-11-08T00:00:00Z/P1DT \
+        --repo-id centos-7-x86_64-base
 ```
 
 Make sure to create a schedule for your other repositories as well.
