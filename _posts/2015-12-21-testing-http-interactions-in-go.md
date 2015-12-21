@@ -16,20 +16,20 @@ into our codebase.
 There are different techniques which can be used when it comes to
 testing a software product.
 
-For instance in [Unit testing](https://en.wikipedia.org/wiki/Unit_testing)
+For instance in [unit testing](https://en.wikipedia.org/wiki/Unit_testing)
 we test the individual components of a product in order to
 determine and evaluate the functionality of a single isolated
 component of our product.
 
-In [Integration testing](https://en.wikipedia.org/wiki/Integration_testing)
-for instane we test groups of components or modules as a whole in
+In [integration testing](https://en.wikipedia.org/wiki/Integration_testing)
+for instance we test groups of components or modules as a whole in
 order to test the functionality and performance of our
 product in a real-world environment.
 
-The topic on testing a product has been thoroughly documented and
+The topic on testing a software product has been thoroughly documented and
 discussed already, so for more information on this topic please
 refer to the
-[Software testing](https://en.wikipedia.org/wiki/Software_testing)
+[software testing](https://en.wikipedia.org/wiki/Software_testing)
 page on Wikipedia.
 
 In this post we will see how we can record and replay HTTP
@@ -53,7 +53,7 @@ which is used to mock server responses as if your client was talking
 to the real server.
 
 By using
-[Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection),
+[dependency injection](https://en.wikipedia.org/wiki/Dependency_injection),
 we inject an [http.Transport](https://golang.org/pkg/net/http/#Transport)
 into our client, which routes all HTTP traffic through
 our own [httptest.Server](https://golang.org/pkg/net/http/httptest/#Server)
