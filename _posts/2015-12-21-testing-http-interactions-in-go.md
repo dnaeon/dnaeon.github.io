@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Testing HTTP interactions in Go
-tags: golang testing http vcr go-vcr
+tags: golang programming testing http vcr go-vcr
 ---
 Testing is an important part of software development, which gives
 information about the quality of a product. It is that process by which
