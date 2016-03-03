@@ -19,7 +19,7 @@ You can find  the code used in this post at the
 [Go Dependency Graph Resolution Algorithm](https://github.com/dnaeon/go-dependency-graph-algorithm)
 repository.
 
-### </TL;DR>
+### End of TL;DR
 
 Possible solution would be to use *resources* as a way to abstract
 things, and an example configuration sent to minions may look
@@ -73,7 +73,7 @@ having to pull lots of library dependencies, which would happen if I
 have to use an external solution.
 
 It was yesterday when I came across the
-[An example dependency resolution algorithm in Python)(https://breakingcode.wordpress.com/2013/03/11/an-example-dependency-resolution-algorithm-in-python/),
+[An example dependency resolution algorithm in Python](https://breakingcode.wordpress.com/2013/03/11/an-example-dependency-resolution-algorithm-in-python/),
 post which implements a simple, but efficient algorithm for resolving
 dependency graphs. Even better, the algorithm uses an iterative
 approach rather than a recursive one.
