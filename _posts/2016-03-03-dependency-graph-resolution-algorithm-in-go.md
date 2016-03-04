@@ -72,9 +72,9 @@ specific case I wanted something as simple as possible without
 having to pull lots of library dependencies, which would happen if I
 have to use an external solution.
 
-It was yesterday when I came across the
+It was yesterday when I came across
 [An example dependency resolution algorithm in Python](https://breakingcode.wordpress.com/2013/03/11/an-example-dependency-resolution-algorithm-in-python/),
-post which implements a simple, but efficient algorithm for resolving
+which implements a simple, but efficient algorithm for resolving
 dependency graphs. Even better, the algorithm uses an iterative
 approach rather than a recursive one.
 
@@ -88,6 +88,9 @@ Every node with *no* dependencies is then removed from the graph. If at
 any point in time there are still nodes in the graph, but we cannot
 find nodes with *no* dependencies - then we have a
 circular dependency in our graph.
+
+This is also known as
+[topological sorting](https://en.wikipedia.org/wiki/Topological_sorting).
 
 Having said the above, lets implement now the algorithm.
 
@@ -177,9 +180,8 @@ func resolveGraph(graph Graph) (Graph, error) {
 			for name := range nodeDependencies {
 				g = append(g, nodeNames[name])
 			}
-			displayGraph(g)
 
-			return nil, errors.New("Circular dependency found")
+			return g, errors.New("Circular dependency found")
 		}
 
 		// Remove the ready nodes and add them to the resolved graph
