@@ -3,7 +3,7 @@ layout: post
 title: Choosing Lua as the data description and configuration language
 tags: golang lua programming
 ---
-One the projects I work on during my spare time these days is
+One of the projects I work on during my spare time these days is
 [Gru](https://github.com/dnaeon/gru), which is an orchestration and
 configuration management framework written in Go and Lua.
 
