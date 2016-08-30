@@ -132,7 +132,7 @@ sys     0m0.006s
 This was a simple test, but it does show one of the key features of
 Gru - it is fast, and it is concurrent.
 
-The next tests extends upon the previous examples by adding a few
+The next test extends upon the previous example by adding a few
 more resources.
 
 The Puppet code that we use for the next test relies on the
