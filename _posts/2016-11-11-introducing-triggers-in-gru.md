@@ -127,13 +127,13 @@ svc.require = { pkg:ID(), config:ID() }
 
 -- Subscribe for changes in the config file resource.
 -- Reload the SNMP daemon service if the config file has changed.
-svc.subscribe[pkg:ID()] = function()
+svc.subscribe[config:ID()] = function()
    os.execute("systemctl reload snmpd")
 end
 
 -- Subscribe for changes in the package resource.
 -- Restart the SNMP daemon service if the package has changed.
-svc.subscribe[config:ID()] = function()
+svc.subscribe[pkg:ID()] = function()
    os.execute("systemctl restart snmpd")
 end
 
