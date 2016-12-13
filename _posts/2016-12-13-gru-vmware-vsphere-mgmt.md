@@ -211,7 +211,7 @@ see that if all dependencies are satisfied by the time we reach the
 Virtual Machines concurrently.
 
 Being able to execute operations like this in concurrent way can
-dramatically reduce the time required for standing up a new
+greatly reduce the time required for standing up a new
 environment.
 
 Time to actually run the code we've written so far!
@@ -271,9 +271,9 @@ operations for concurrent execution.
 This example shows one of the key features of the project - it's
 ability to execute operations concurrently.
 
-Hopefully this introduction gave you a good idea on how to start
+Hopefully this introduction gave you a nice overview on how to start
 managing your virtual infrastructure using Gru.
 
 Make sure to also check the
-[Gru project at Github](https://github.com/dnaeon/gru) for more
+project at [Github](https://github.com/dnaeon/gru) for more
 information and other code examples.
