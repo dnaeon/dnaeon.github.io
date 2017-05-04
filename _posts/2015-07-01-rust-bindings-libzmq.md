@@ -146,7 +146,7 @@ fn main() {
 Lets build our project now.
 
 ```bash
-$ cacargo build
+$ cargo build
     Updating registry `https://github.com/rust-lang/crates.io-index`
     Updating git repository `https://github.com/dnaeon/rust-libzmq.git`
  Downloading libc v0.1.8
