@@ -104,7 +104,7 @@ func (cs *ConcurrentSlice) Iter() <-chan ConcurrentSliceItem {
 
 	f := func() {
 		cs.Lock()
-		defer cs.Lock()
+		defer cs.Unlock()
 		for index, value := range cs.items {
 			c <- ConcurrentSliceItem{index, value}
 		}
