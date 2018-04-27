@@ -4,7 +4,7 @@ title: Go UCS API library
 tags: programming go golang ucs api library bindings
 ---
 As mentioned in a
-[previous blog post](2018-01-12-convert-big-endian-uuid-to-middle-endian.md)
+[previous blog post](http://dnaeon.github.io/convert-big-endian-uuid-to-middle-endian/)
 one of the past projects I've been involved in was an internal
 [CMDB](https://en.wikipedia.org/wiki/Configuration_management_database)
 system and the development of collection of Cisco UCS
