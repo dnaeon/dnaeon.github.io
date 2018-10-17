@@ -5,12 +5,12 @@ created: 1354120607
 tags: linux vpn
 ---
 This post is a follow-up of
-[installing OpenVPN on Debian GNU/Linux](/node/97) post and provides
+[installing OpenVPN on Debian GNU/Linux](http://dnaeon.github.io/installing-openvpn-on-debian-gnu-linux/) post and provides
 information on setting up your firewall rules with *iptables(8)* for
 OpenVPN.
 
 It assumes you have installed your OpenVPN server already as described
-in [this post here](/node/97). Just as a reminder this is how our
+in [this post here](http://dnaeon.github.io/installing-openvpn-on-debian-gnu-linux/). Just as a reminder this is how our
 hosts and networks looked like.
 
 ```text

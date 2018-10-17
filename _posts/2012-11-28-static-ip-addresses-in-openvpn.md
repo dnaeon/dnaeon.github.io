@@ -19,7 +19,7 @@ What you would want to have is grant access to that person only, and
 not everyone in your OpenVPN subnet.
 
 For completeness of this post I'm going to use the [OpenVPN server's
-configuration as described here](/node/97) as a reference.
+configuration as described here](http://dnaeon.github.io/installing-openvpn-on-debian-gnu-linux/) as a reference.
 
 The way that we assign static IP addresses for our clients in OpenVPN
 is done via the `client-config-dir` option. The `client-config-dir`
