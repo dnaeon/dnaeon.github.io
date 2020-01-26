@@ -260,22 +260,26 @@ the value of a nested key in an alist. Here's one possible
 implementation.
 
 ``` common-lisp
-(defun assoc* (alist key &rest keys)
-  "Fetch value in a nested alist"
-  (reduce (lambda (val key)
-            (cdr (assoc key val)))
-          keys
-          :initial-value (cdr (assoc key alist))))
+(defun assoc-path (alist path &key (key #'identity) (test #'eql) (default nil))
+  "Retrieve the value in the given ALIST represented by the given PATH"
+  (or (reduce (lambda (alist k)
+                (cdr (assoc k alist :key key :test test)))
+              path
+              :initial-value alist)
+      default))
 ```
 
 Retrieving the nested value is now an easy thing, e.g.
 
 ``` common-lisp
-CL-USER> (assoc* *json* :foo :bar :baz :qux)
+CL-USER> (assoc-path *json* '(:foo :bar :baz :qux))
 42
 ```
 
-This looks much better.
+This looks much better. The `ASSOC-PATH` function we've implemented
+takes the usual `:test` and `:key` keyword parameters just like
+`ASSOC` does, and also adds support for specifying a default value via
+the `:default` keyword parameter, if no such path exists.
 
 Property lists are another form of lookup tables, which are made up of
 cons cells. They are a bit more primitive than alists, but they do
