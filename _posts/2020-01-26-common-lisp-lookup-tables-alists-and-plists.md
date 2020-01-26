@@ -356,7 +356,7 @@ A convenient function we can use when looking up a symbol's plist is
 [GET](http://clhs.lisp.se/Body/f_get.htm). Above example can be
 shortened a bit like this.
 
-``` common-lisp`
+``` common-lisp
 CL-USER> (setf (get '*my-list* :some-key) :some-value)
 :SOME-VALUE
 CL-USER> (get '*my-list* :some-key)
@@ -366,7 +366,7 @@ CL-USER> (get '*my-list* :some-key)
 For removing mappings from a plist we can still use `REMF`, or the more convenient
 [REMPROP](http://clhs.lisp.se/Body/f_rempro.htm) function.
 
-``` common-lisp`
+``` common-lisp
 CL-USER> (remprop '*my-list* :some-key)
 (:SOME-KEY :SOME-VALUE)
 CL-USER> (symbol-plist '*my-list*)
