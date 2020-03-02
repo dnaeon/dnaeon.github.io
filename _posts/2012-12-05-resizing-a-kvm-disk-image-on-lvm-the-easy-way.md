@@ -5,18 +5,20 @@ created: 1354714045
 tags: linux virtualization kvm
 ---
 In a previous post we've seen how to resize a KVM disk image on LVM,
-which was explained in the
-[Resizing a KVM disk image on LVM, The Hard Way](/node/84) post.
+which was explained in the [Resizing a KVM disk image on LVM, The Hard
+Way](https://dnaeon.github.io/resizing-a-kvm-disk-image-on-lvm-the-hard-way/)
+post.
 
 In this post I'm going to show you how to do the same thing, but this
 time in a bit safer, automated and less adventurous way.
 
 If you are one of those adventurous souls who don't mind stepping into
 deep waters, then I would recommend you checking out the [Resizing a
-KVM disk image on LVM, The Hard Way](/node/84), which will take you to
-a journey of resizing your KVM disk images. If you are just looking
-for a quick and safe way for increasing your KVM disk images, then
-this post is for you.
+KVM disk image on LVM, The Hard
+Way](https://dnaeon.github.io/resizing-a-kvm-disk-image-on-lvm-the-hard-way/),
+which will take you to a journey of resizing your KVM disk images. If
+you are just looking for a quick and safe way for increasing your KVM
+disk images, then this post is for you.
 
 The difference between this post and the *Resizing a KVM disk image on
 LVM, The Hard Way* is that here we are going to use `virt-resize(1)`
@@ -33,9 +35,10 @@ the resize operation.
 So, here's what I'd recommend - use this post for resizing your KVM
 disk images easy and safely if you have plenty of free disk space for
 the new LVM volume required by *virt-resize(1)*, and use the [Resizing
-a KVM disk image on LVM, The Hard Way](/node/84) instructions if you
-are limited at free disk space and thus cannot afford to create a new
-LVM volume for the resize operation.
+a KVM disk image on LVM, The Hard
+Way](https://dnaeon.github.io/resizing-a-kvm-disk-image-on-lvm-the-hard-way/)
+instructions if you are limited at free disk space and thus cannot
+afford to create a new LVM volume for the resize operation.
 
 A bit of background information about our KVM hypervisor and the VM
 guest domains - we run Debian Wheezy systems as the KVM hypervisors

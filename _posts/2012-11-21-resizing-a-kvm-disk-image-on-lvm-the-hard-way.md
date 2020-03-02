@@ -13,11 +13,14 @@ images for our guests. Inside the VM guests we also use LVM volumes
 for our filesystems.
 
 You can also have a look at the [Resizing a KVM disk image on LVM, The
-Easy Way](/node/85) post for a different and easy way of resizing KVM
-disk images. The difference between this post and the other one when
-it comes to resizing KVM disk images is explained in the [Resizing a
-KVM disk image on LVM, The Easy Way](/node/85) post, so you might want
-to check that one also.
+Easy
+Way](https://dnaeon.github.io/resizing-a-kvm-disk-image-on-lvm-the-easy-way/)
+post for a different and easy way of resizing KVM disk images. The
+difference between this post and the other one when it comes to
+resizing KVM disk images is explained in the [Resizing a KVM disk
+image on LVM, The Easy
+Way](https://dnaeon.github.io/resizing-a-kvm-disk-image-on-lvm-the-easy-way/)
+post, so you might want to check that one also.
 
 While this guide shows you how to resize your VM guests using LVM
 volumes you can still use this guide as a reference for resizing your
