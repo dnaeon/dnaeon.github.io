@@ -512,7 +512,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-b
 Create the manifest for the `admin-user` Service Account. This is what
 the `dashboard-adminuser.yml` manifest looks like.
 
-``` shell
+``` yaml
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -524,7 +524,7 @@ metadata:
 Create the manifest for Cluster Role Binding. This what the
 `dashboard-cluster-rolebinding.yaml` manifest looks like.
 
-``` shell
+``` yaml
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
