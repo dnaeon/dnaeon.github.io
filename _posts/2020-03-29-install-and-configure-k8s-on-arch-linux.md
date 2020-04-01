@@ -147,7 +147,7 @@ PACKAGE_DIR="${HOME}/kube-packages/$( date +%Y-%m-%d )"
 
 mkdir -p "${PACKAGE_DIR}"
 
-for p in kubectl-bin kubelet-bin kubeadm-bin; do
+for p in kubectl-bin kubelet-bin kubeadm-bin cni-plugins-bin; do
     cd "${PACKAGE_DIR}"
 
     echo "> Fetching ${p} ..."
