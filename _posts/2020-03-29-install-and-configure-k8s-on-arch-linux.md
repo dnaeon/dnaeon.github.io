@@ -206,7 +206,7 @@ Finally, we will install a few additional packages required by `kubeadm`,
 which are used as part of the bootstrap process.
 
 ``` shell
-sudo pacman -S ethtool ebtables socat
+sudo pacman -S ethtool ebtables socat conntrack-tools
 ```
 
 ## Load Balancer setup
