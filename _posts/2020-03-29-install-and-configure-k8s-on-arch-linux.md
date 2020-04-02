@@ -342,7 +342,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 Now we can deploy a pod network to the cluster.
 
 ``` shell
-kubectl apply -f https://docs.projectcalico.org/v3.11/manifests/calico.yaml
+kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 ```
 
 Once completed you should see output similar to the one below.
