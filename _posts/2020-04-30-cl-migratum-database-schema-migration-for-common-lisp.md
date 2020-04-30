@@ -1,10 +1,10 @@
 ---
 layout: post
-title: cl-migratum: Database Schema Migration System for Common Lisp
+title: cl-migratum - Database Schema Migration System for Common Lisp
 tags: lisp programming database schema migration
 ---
 Continuing [my Lisp
-journey](./2020-01-05-starting-with-common-lisp-in-2020.md) over the
+journey](http://dnaeon.github.io/starting-with-common-lisp-in-2020/) over the
 past few months I went ahead and started another side project, so I
 could spend more time with Common Lisp.
 
