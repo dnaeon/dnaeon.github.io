@@ -174,7 +174,7 @@ Pretty straightforwad, now lets translate the C structs as well into
 Rust add implement common methods that we will use when working with
 these types in Rust.
 
-```C
+```c
 typedef struct
 {
         char            *key;
