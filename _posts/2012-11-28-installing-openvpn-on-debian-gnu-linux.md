@@ -228,11 +228,11 @@ at `/var/log/openvpn.log`.
 You can find a working client configuration file at the link below,
 which you can use for your clients
 
-* [OpenVPN client configuration](/node/49)
+* [OpenVPN client configuration](https://dnaeon.github.io/openvpn-freebsd/)
 
 ## Firewall rules with iptables(8) for OpenVPN
 
 Please check the post below for more information on setting up
 firewall rules with `iptables(8)` for your OpenVPN server.
 
-* [Firewall rules with iptables for OpenVPN](/node/98)
+* [Firewall rules with iptables for OpenVPN](http://dnaeon.github.io/firewall-rules-with-iptables-for-openvpn/)
