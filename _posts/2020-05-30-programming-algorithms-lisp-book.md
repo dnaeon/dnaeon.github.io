@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Programming Algorithms" - a book about Lisp and algorithms
+title: Programming Algorithms - a book about Lisp and algorithms
 tags: lisp programming algorithms
 ---
 Today I've got my copy of [Programming
