@@ -216,6 +216,10 @@ Kubernetes cluster we would need to load-balance requests to the
 control-plane nodes in the cluster. For that purpose we will use
 an [HAProxy](http://www.haproxy.org) load-balancer.
 
+Note that the HAProxy service we are setting up in this part of
+the documentation is actually running on a separate system,
+outside of the Kubernetes cluster.
+
 You can read more about setting up [HAProxy on Arch
 Linux](https://wiki.archlinux.org/index.php/HAproxy) and the official
 site of HAProxy as well.
