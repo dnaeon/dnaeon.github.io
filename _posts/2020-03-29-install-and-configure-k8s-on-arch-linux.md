@@ -159,7 +159,7 @@ for p in kubectl-bin kubelet-bin kubeadm-bin cni-plugins-bin; do
     makepkg
 
     echo "> Installing ${p} ..."
-    sudo pacman --noconfirm -U *.tar.xz
+    sudo pacman --noconfirm -U *.tar.zst
 done
 
 cd "${OLD_PWD}"
