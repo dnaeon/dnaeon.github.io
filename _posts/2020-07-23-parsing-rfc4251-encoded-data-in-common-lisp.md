@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Decoding RFC 4251 binary data in Common Lisp
-tags: lisp programming rfc4251 binary data
+tags: parsing decoding lisp programming rfc4251 binary data
 ---
 [RFC 4251](https://tools.ietf.org/html/rfc4251) describes the Secure
 Shell (SSH) Protocol Architecture, which also contains a section of
