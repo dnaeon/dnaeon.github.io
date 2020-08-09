@@ -81,7 +81,7 @@ CL-USER> (let ((s (rfc4251:make-binary-output-stream)))
 ```
 
 Here are a few more examples taken directly from the examples section
-described in [RFC 4251][RFC 4251].
+described in [RFC 4251][RFC 4251]
 
 ``` common-lisp
 CL-USER> (let ((s (rfc4251:make-binary-output-stream)))
