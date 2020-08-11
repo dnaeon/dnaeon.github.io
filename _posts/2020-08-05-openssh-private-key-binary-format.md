@@ -294,9 +294,7 @@ uint32 number-of-keys
 ;; This one is a buffer, in which the public key is embedded.
 ;; Size of the buffer is determined by the uint32 value,
 ;; which preceeds it.
-;; The example below specifies the fields used by an
-;; RSA public key. Keep in mind that different public
-;; keys will have a different set of fields.
+;; The public components below are for RSA public keys.
 uint32 (size of buffer)
     string keytype ("ssh-rsa")
     mpint  e       (RSA public exponent)
@@ -305,9 +303,7 @@ uint32 (size of buffer)
 ;; Encrypted section
 ;; This one is a again a buffer with size
 ;; specified by the uint32 value, which preceeds it.
-;; The example below uses an RSA private key fields.
-;; Different private keys will have a different set
-;; of fields.
+;; The fields below are for RSA private keys.
 uint32 (size of buffer)
     uint32  check-int
     uint32  check-int  (must match with previous check-int value)
@@ -329,8 +325,137 @@ Keep in mind that different public/private key pairs will have a
 different set of fields, but they will all follow the above
 structure when being encoded.
 
-You can find out more about the different kinds of keys
-and the fields they have in [RFC 4253][RFC 4253] and
+This is what the binary representation for a DSA private key looks
+like.
+
+``` text
+;; AUTH_MAGIC is a hard-coded, null-terminated string,
+;; set to "openssh-key-v1".
+byte[n] AUTH_MAGIC
+
+;; ciphername determines the cipher name (if any),
+;; or is set to "none", when no encryption is used.
+string   ciphername
+
+;; kdfname determines the KDF function name, which is
+;; either "bcrypt" or "none"
+string   kdfname
+
+;; kdfoptions field.
+;; This one is actually a buffer with size determined by the
+;; uint32 value, which preceeds it.
+;; If no encryption was used to protect the private key,
+;; it's contents will be the [0x00 0x00 0x00 0x00] bytes (empty string).
+;; You should read the embedded buffer, only if it's size is
+;; different than 0.
+uint32 (size of buffer)
+    string salt
+    uint32 rounds
+
+;; Number of keys embedded within the blob.
+;; This value is always set to 1, at least in the
+;; current implementation of the private key format.
+uint32 number-of-keys
+
+;; Public key section.
+;; This one is a buffer, in which the public key is embedded.
+;; Size of the buffer is determined by the uint32 value,
+;; which preceeds it.
+;; DSA parameters embedded in the buffer as defined in FIPS-186-2, section 4.
+uint32 (size of buffer)
+    string keytype ("ssh-dss")
+    mpint  p
+    mpint  q
+    mpint  g
+    mpint  y
+
+;; Encrypted section
+;; This one is a again a buffer with size
+;; specified by the uint32 value, which preceeds it.
+;; DSA key format.
+uint32 (size of buffer)
+    uint32  check-int
+    uint32  check-int  (must match with previous check-int value)
+    string  keytype    ("ssh-dss")
+    mpint   p          (DSA parameters defined in FIPS-186-2, section 4)
+    mpint   q
+    mpint   g
+    mpint   y          (public key)
+    mpint   x          (private key)
+    string  comment    (Comment associated with the key)
+    byte[n] padding    (Padding according to the rules above)
+```
+
+The following is the representation for ED25519 private keys.
+
+``` text
+;; AUTH_MAGIC is a hard-coded, null-terminated string,
+;; set to "openssh-key-v1".
+byte[n] AUTH_MAGIC
+
+;; ciphername determines the cipher name (if any),
+;; or is set to "none", when no encryption is used.
+string   ciphername
+
+;; kdfname determines the KDF function name, which is
+;; either "bcrypt" or "none"
+string   kdfname
+
+;; kdfoptions field.
+;; This one is actually a buffer with size determined by the
+;; uint32 value, which preceeds it.
+;; If no encryption was used to protect the private key,
+;; it's contents will be the [0x00 0x00 0x00 0x00] bytes (empty string).
+;; You should read the embedded buffer, only if it's size is
+;; different than 0.
+uint32 (size of buffer)
+    string salt
+    uint32 rounds
+
+;; Number of keys embedded within the blob.
+;; This value is always set to 1, at least in the
+;; current implementation of the private key format.
+uint32 number-of-keys
+
+;; Public key section.
+;; This one is a buffer, in which the public key is embedded.
+;; Size of the buffer is determined by the uint32 value,
+;; which preceeds it.
+;; ED25519 public key components.
+uint32 (size of buffer)
+    string keytype ("ssh-ed25519")
+
+    ;; The ED25519 public key is a buffer of size 32.
+    ;; The encoding follows the same rules for any
+    ;; other buffer used by SSH -- the size of the
+    ;; buffer preceeds the actual data.
+    uint32 + byte[32]
+
+;; Encrypted section
+;; This one is a again a buffer with size
+;; specified by the uint32 value, which preceeds it.
+;; ED25519 private key.
+uint32 (size of buffer)
+    uint32  check-int
+    uint32  check-int  (must match with previous check-int value)
+    string  keytype    ("ssh-ed25519")
+
+    ;; The public key
+    uint32 + byte[32]  (public key)
+
+    ;; Secret buffer. This is a buffer with size 64 bytes.
+    ;; The bytes[0..32] contain the private key and
+    ;; bytes[32..64] contain the public key.
+    ;; Once decoded you can extract the private key by
+    ;; taking the byte[0..32] slice.
+    uint32 + byte[64]  (secret buffer)
+
+    string  comment    (Comment associated with the key)
+    byte[n] padding    (Padding according to the rules above)
+```
+
+You can find out more about the different kinds of keys and the fields
+they have in [RFC 4253][RFC 4253] and
 [PROTOCOL.certkeys][PROTOCOL.certkeys] documents.
 
 The following references are also useful, so make sure to check these
