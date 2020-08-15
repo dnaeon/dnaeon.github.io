@@ -292,6 +292,7 @@ the actual encryption and decryption of the private key.
 Depending on my spare time I may just go that route, but will leave
 the details for another post.
 
+[PROTOCOL.key]: https://cvsweb.openbsd.org/src/usr.bin/ssh/PROTOCOL.key?annotate=HEAD
 [KDF]: https://en.wikipedia.org/wiki/Key_derivation_function
 [bcrypt_pbkdf]: https://github.com/openssh/openssh-portable/blob/master/openbsd-compat/bcrypt_pbkdf.c
 [Public key fingerprint]: https://en.wikipedia.org/wiki/Public_key_fingerprint
