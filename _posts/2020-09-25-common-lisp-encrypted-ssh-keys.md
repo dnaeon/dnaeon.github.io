@@ -39,7 +39,7 @@ the filesystem.
 ``` common-lisp
 CL-USER> (ssh-keys:with-private-key-file (key #P"~/.ssh/id_rsa" :passphrase "OLD-PASSPHRASE")
            (setf (ssh-keys:key-passphrase key) "MY-NEW-PASSPHRASE")
-           (ssh-keys:write-key-to-pathkey #P"~/.id_rsa-new-passphrase"))
+           (ssh-keys:write-key-to-path key #P"~/.id_rsa-new-passphrase"))
 ```
 
 We can also encrypt an existing un-encrypted key. In order to do that
@@ -49,7 +49,7 @@ accessor, e.g.
 ``` common-lisp
 CL-USER> (ssh-keys:with-private-key-file (key #P"~/.ssh/id_rsa")
            (setf (ssh-keys:key-passphrase key) "my-secret-password")
-           (ssh-keys:write-key-to-pathkey #P"~/.id_rsa-encrypted"))
+           (ssh-keys:write-key-to-path key #P"~/.id_rsa-encrypted"))
 ```
 
 This will encrypt the key using the default cipher (`aes256-ctr` as of
@@ -62,7 +62,7 @@ passphrase to `nil`, e.g.
 ``` common-lisp
 CL-USER> (ssh-keys:with-private-key-file (key #P"~/.ssh/id_rsa" :passphrase "PASSPHRASE")
            (setf (ssh-keys:key-passphrase key) nil)
-           (ssh-keys:write-key-to-pathkey #P"~/.id_rsa-unencrypted"))
+           (ssh-keys:write-key-to-path key #P"~/.id_rsa-unencrypted"))
 ```
 
 If we need to change the cipher for a private key we can do that as well,
@@ -86,7 +86,7 @@ Then set a new cipher.
 ``` common-lisp
 CL-USER> (ssh-keys:with-private-key-file (key #P"~/.ssh/id_rsa" :passphrase "PASSPHRASE")
            (setf (ssh-keys:key-cipher-name key) "3des-cbc")
-           (ssh-keys:write-key-to-pathkey #P"~/.id_rsa-3des-cbc"))
+           (ssh-keys:write-key-to-path key #P"~/.id_rsa-3des-cbc"))
 ```
 
 And finally, we can change the number of iterations which is used by
@@ -100,7 +100,7 @@ attacks.
 ``` common-lisp
 CL-USER> (ssh-keys:with-private-key-file (key #P"~/.ssh/id_rsa" :passphrase "PASSPHRASE")
            (setf (ssh-keys:key-kdf-rounds key) 32)
-           (ssh-keys:write-key-to-pathkey #P"~/.id_rsa-stronger"))
+           (ssh-keys:write-key-to-path key #P"~/.id_rsa-stronger"))
 ```
 
 For more information and additional examples, please refer to the
