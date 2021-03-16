@@ -16,7 +16,9 @@ Go, Rust, Common Lisp, Scheme and Clojure.
 
 I am also a proud father of two kids - Alexander and Karina, so
 whenever I don't have any coding to do, I try to spend as much time as
-I can with my kids.
+I can with my kids. That's us here.
+
+![_config.yml]({{ site.baseurl }}/images/me-and-the-kids.jpg)
 
 On [my LinkedIn profile](http://www.linkedin.com/in/dnaeon) you can
 view my work experience and recommendations.
