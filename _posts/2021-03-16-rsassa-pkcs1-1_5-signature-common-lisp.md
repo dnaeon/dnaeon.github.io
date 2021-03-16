@@ -19,7 +19,7 @@ our own.
 
 My use case for RSASSA-PKCS1-v1_5 signatures is related to OpenSSH
 certificate keys as described in
-[PROTOCOL.certkey][PROTOCOL.certkey]. I need to parse an OpenSSH
+[PROTOCOL.certkeys][PROTOCOL.certkeys]. I need to parse an OpenSSH
 Certificate Key and in order to confirm it's authenticity and
 integrity, I also need to verify the digital signature that is
 embedded within in. This is related to my [cl-ssh-keys][cl-ssh-keys]
