@@ -1207,7 +1207,7 @@ checking out.
 So far I like the language - it gives the freedom of choice in regards
 to which paradigm you want to program in - functional, imperative or
 object-oriented. That coupled with the powerful capabilities of the
-macro system and the whole experesiveness of the language makes it a
+macro system and the whole expressiveness of the language makes it a
 joy to program in.
 
 And finally, if this post sparked some interested in you in regards to
