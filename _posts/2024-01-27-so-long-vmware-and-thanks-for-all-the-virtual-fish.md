@@ -102,7 +102,7 @@ Offsite (Radio) in San Francisco, 2019.
 
 Some stats about me and how long I've been with VMware.
 
-![_config.yml]({{ site.baseurl }}/images/vmware/mnikolov-slack-stats.jpg)
+![_config.yml]({{ site.baseurl }}/images/vmware/mnikolov-slack-stats.png)
 
 And finally I want to wish all the best to my colleagues and friends at VMware,
 and I really hope our paths cross again! Keep rocking folks, and till next time!
