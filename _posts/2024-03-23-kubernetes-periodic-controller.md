@@ -449,7 +449,7 @@ interface.
 We will now register this periodic runner with our manager. Open `cmd/main.go`
 and apply the following changes.
 
-``` go
+``` diff
 diff --git a/cmd/main.go b/cmd/main.go
 index 292af04..18d2b38 100644
 --- a/cmd/main.go
