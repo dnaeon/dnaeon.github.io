@@ -309,7 +309,7 @@ kustomize-dot generate -f kube-prometheus.yaml \
 
 The result looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/kustomize-kube-prometheus-3.svg)
+![_config.yml]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-3.svg)
 
 For additional information and examples, please refer to the
 [dnaeon/kustomize-dot](https://github.com/dnaeon/kustomize-dot) repo.
