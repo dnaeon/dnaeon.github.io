@@ -10,8 +10,9 @@ layout: default
       <div class="entry">
         {{ post.excerpt }}
       </div>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More&nbsp;&#183;{% include read-time.html content=post.content %}</a>
   </article>
   {% endfor %}
+
   {% include pagination.html %}
 </div>
