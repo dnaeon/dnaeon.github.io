@@ -58,9 +58,10 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript"]
 highlighter: rouge
 permalink: /:title/
+# permalink: pretty
 
 # The release of Jekyll Now that you're using
-version: v3.9.3
+# version: v3.9.3
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
@@ -72,14 +73,20 @@ kramdown:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
 
+# Pagination settings
+paginate: 10
+paginate_path: "/blog/page/:num/"
+
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: :expanded # You might prefer to minify using :compressed
+  sass_dir: _sass
 
 # Use the following plug-ins
 plugins:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-sitemap  # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed  # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-paginate
 
 # Exclude these files from your production _site
 exclude:

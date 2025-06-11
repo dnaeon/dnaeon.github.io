@@ -1,18 +1,28 @@
-
 //
 // VARIABLES
 //
 
 // Colors
+$white: #FFFFFF;
+$black: #000000;
+$gray: #666666;
+$lightGray: #EEEEEE;
+$paleGray: #DDDDDD;
+$darkGray: #333333;
+$darkerGray: #222222;
 $blue: #4183C4;
+$purple: #4141C4;
+$mahogany: #BD2C00;
 
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+// Pagination colors
+$pagination-color: $darkGray;
+$pagination-hover-color: $blue;
+$pagination-active-bg: $blue;
+$pagination-active-color: $white;
+$pagination-separator-color: $paleGray;
+
+// Transitions
+$time: 250ms;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
