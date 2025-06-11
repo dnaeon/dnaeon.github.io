@@ -309,6 +309,11 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
   }
+  .reading-time {
+    text-transform: uppercase;
+    font-size: 14px !important;
+    color: gray;
+  }
 }
 
 .wrapper-footer {
@@ -328,3 +333,4 @@ footer {
 @import "highlights";
 @import "svg-icons";
 @import "pagination";
+@import "search";
