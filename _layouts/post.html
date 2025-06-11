@@ -9,6 +9,19 @@ layout: default
     {{ content }}
   </div>
 
+  <div class="post-tags">
+    &nbsp;Tags:&nbsp;
+    {% if post %}
+      {% assign tags = post.tags %}
+    {% else %}
+      {% assign tags = page.tags %}
+    {% endif %}
+    {% for tag in tags %}
+      <a class="tags-button"<a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{tag}}</a>
+      {% unless forloop.last %}{% endunless %}
+    {% endfor %}
+  </div>
+
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>

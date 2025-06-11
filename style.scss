@@ -120,6 +120,46 @@ img {
   color: $gray;
 }
 
+.post-tags {
+  // font-weight: bold;
+  font-style: italic;
+  color: $gray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .tags-button {
+    display: inline-block;
+    text-align: center;
+    border: 01px solid $paleGray;
+    border-radius: 03px;
+    background: #ffffff;
+    font-weight: 400;
+    color: $gray;
+    font-size: 16px !important;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 06px 12px;
+    margin-right: 04px;
+    cursor: pointer;
+    user-select: none;
+    transition: .4s;
+  }
+
+  .tags-button:hover {
+    color: $darkGray;
+    text-decoration: underline;
+  }
+
+  .tags-button:visited {
+    color: inherit;
+  }
+}
+
+.tag-head {
+  font-weight: bold;
+  color: $gray;
+}
+
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;
