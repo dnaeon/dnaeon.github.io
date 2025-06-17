@@ -253,23 +253,43 @@ So, after spending some time configuring `treesit-simple-imenu-settings` with
 the help of `M-x treesit-explore-mode` here's what my current config looks like.
 
 ``` emacs-lisp
-(defun my/go-ts-node-is-global-p (node)
-  "Predicate which tests whether the node belongs to the global scope"
-  ;; The parent node for nodes, which belong to the global scope (e.g. vars and
-  ;; consts) is a node of type `source_file'.
-  (let ((parent (treesit-node-parent node)))
-    (string-equal (treesit-node-type parent) "source_file")))
+;; Treesitter helpers to extract node names for various symbols such as consts,
+;; vars, imports, etc.
 
-(defun my/go-ts-const-node-name (node)
-  "Returns the name of a `const_declaration' node"
-  (let* ((const-spec (treesit-search-subtree node "const_spec"))
-         (const-name (treesit-node-child-by-field-name const-spec "name")))
+(defun my/go-ts-var-is-global-p (node)
+  "Predicate which tests whether a `var_spec' node belongs to the global scope"
+  ;; The parent node for `var_spec' which is `var_declaration' belongs to the
+  ;; global scope, if the `var_declaration' node belongs to a parent node of
+  ;; type `source_file'.
+  (let* ((var-declaration (treesit-parent-until
+                          node
+                          (lambda (item)
+                            (string-equal (treesit-node-type item) "var_declaration"))
+                          t))
+         (var-declaration-parent (treesit-node-parent var-declaration)))
+    (string-equal (treesit-node-type var-declaration-parent) "source_file")))
+
+(defun my/go-ts-const-is-global-p (node)
+  "Predicate which tests whether a `const_spec' node belongs to the global scope"
+  ;; The parent node for `const_spec' which is `const_declaration' belongs to the
+  ;; global scope, if the `const_declaration' node belongs to a parent node of
+  ;; type `source_file'.
+  (let* ((const-declaration (treesit-parent-until
+                          node
+                          (lambda (item)
+                            (string-equal (treesit-node-type item) "const_declaration"))
+                          t))
+         (const-declaration-parent (treesit-node-parent const-declaration)))
+    (string-equal (treesit-node-type const-declaration-parent) "source_file")))
+
+(defun my/go-ts-const-spec-node-name (node)
+  "Returns the name of a `const_spec' node"
+  (let ((const-name (treesit-node-child-by-field-name node "name")))
     (treesit-node-text const-name)))
 
-(defun my/go-ts-var-node-name (node)
-  "Returns the name of a `var_declaration' node"
-  (let* ((var-spec (treesit-search-subtree node "var_spec"))
-         (var-name (treesit-node-child-by-field-name var-spec "name")))
+(defun my/go-ts-var-spec-node-name (node)
+  "Returns the name of a `var_spec' node"
+  (let ((var-name (treesit-node-child-by-field-name node "name")))
     (treesit-node-text var-name)))
 
 (defun my/go-ts-import-node-name (node)
@@ -279,7 +299,7 @@ the help of `M-x treesit-explore-mode` here's what my current config looks like.
          (package-name (treesit-search-subtree import-path "interpreted_string_literal_content")))
     (cond
      (import-alias
-      (format "%s (alias %s)" (treesit-node-text package-name) (treesit-node-text import-alias)))
+      (format "%s (%s)" (treesit-node-text package-name) (treesit-node-text import-alias)))
       (t (treesit-node-text package-name)))))
 
 (defun my/treesit-simple-imenu-settings ()
@@ -287,8 +307,8 @@ the help of `M-x treesit-explore-mode` here's what my current config looks like.
   (setq-local treesit-simple-imenu-settings
               '(("Imports" "\\`import_spec\\'" nil my/go-ts-import-node-name)
                 ("Functions" "\\`function_declaration\\'" nil nil)
-                ("Constants" "\\`const_declaration\\'" my/go-ts-node-is-global-p my/go-ts-const-node-name)
-                ("Variables" "\\`var_declaration\\'" my/go-ts-node-is-global-p my/go-ts-var-node-name)
+                ("Constants" "\\`const_spec\\'" my/go-ts-const-is-global-p my/go-ts-const-spec-node-name)
+                ("Variables" "\\`var_spec\\'" my/go-ts-var-is-global-p my/go-ts-var-spec-node-name)
                 ("Interfaces" "\\`type_declaration\\'" go-ts-mode--interface-node-p nil)
                 ("Types" "\\`type_declaration\\'" go-ts-mode--other-type-node-p nil)
                 ("Aliases" "\\`type_declaration\\'" go-ts-mode--alias-node-p nil)
