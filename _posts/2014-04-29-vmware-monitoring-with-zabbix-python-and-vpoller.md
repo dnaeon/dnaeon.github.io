@@ -143,7 +143,7 @@ Once you import the `Zabbix vPoller Templates` you should see eight
 new templates in Zabbix. You can see the templates from the screenshot
 below:
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-vpoller-templates.jpg)
+[![]({{ site.baseurl }}/images/zabbix-vpoller-templates.jpg)]({{ site.baseurl }}/images/zabbix-vpoller-templates.jpg){:.glightbox}
 
 Now we need to add two scripts to the `Zabbix externalscripts
 directory`. The scripts we need to put there are the `vpoller-zabbix`
@@ -178,18 +178,18 @@ Hosts`, then at the top-right click on the `Create host` button. Fill
 in the hostname of the vCenter we are going to monitor and add it to a
 group, e.g. `vCenters` in my case.
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-add-host-1.jpg)
+[![]({{ site.baseurl }}/images/zabbix-add-host-1.jpg)]({{ site.baseurl }}/images/zabbix-add-host-1.jpg){:.glightbox}
 
 Next, click on the `Templates` tab and add the `Template VMware
 vSphere - vPoller` template to your vCenter.
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-add-host-2.jpg)
+[![]({{ site.baseurl }}/images/zabbix-add-host-2.jpg)]({{ site.baseurl }}/images/zabbix-add-host-2.jpg){:.glightbox}
 
 The last thing we need to do is add a macro for our vSphere
 host. Navigate to the `Macros` tab and add the `{$VSPHERE.HOST}` macro
 with value the hostname of the vSphere host.
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-add-host-3.jpg)
+[![]({{ site.baseurl }}/images/zabbix-add-host-3.jpg)]({{ site.baseurl }}/images/zabbix-add-host-3.jpg){:.glightbox}
 
 Once done, click the `Save` button and you are ready.
 
@@ -203,20 +203,20 @@ vSphere environment using vPoller.
 
 Checking the latest data for our vCenter server:
 
-![_config.yml]({{ site.baseurl }}/images/vcenter-latest-data.jpg)
+[![]({{ site.baseurl }}/images/vcenter-latest-data.jpg)]({{ site.baseurl }}/images/vcenter-latest-data.jpg){:.glightbox}
 
 Let's see the latest data for some of our ESXi hosts:
 
-![_config.yml]({{ site.baseurl }}/images/esx-host-1.jpg)
-![_config.yml]({{ site.baseurl }}/images/esx-host-2.jpg)
-![_config.yml]({{ site.baseurl }}/images/esx-host-3.jpg)
+[![]({{ site.baseurl }}/images/esx-host-1.jpg)]({{ site.baseurl }}/images/esx-host-1.jpg){:.glightbox}
+[![]({{ site.baseurl }}/images/esx-host-2.jpg)]({{ site.baseurl }}/images/esx-host-2.jpg){:.glightbox}
+[![]({{ site.baseurl }}/images/esx-host-3.jpg)]({{ site.baseurl }}/images/esx-host-3.jpg){:.glightbox}
 
 And here is the latest data for some of our Virtual Machines:
 
-![_config.yml]({{ site.baseurl }}/images/vm-1.jpg)
-![_config.yml]({{ site.baseurl }}/images/vm-2.jpg)
-![_config.yml]({{ site.baseurl }}/images/vm-3-new.jpg)
-![_config.yml]({{ site.baseurl }}/images/vm-4.jpg)
+[![]({{ site.baseurl }}/images/vm-1.jpg)]({{ site.baseurl }}/images/vm-1.jpg){:.glightbox}
+[![]({{ site.baseurl }}/images/vm-2.jpg)]({{ site.baseurl }}/images/vm-2.jpg){:.glightbox}
+[![]({{ site.baseurl }}/images/vm-3-new.jpg)]({{ site.baseurl }}/images/vm-3-new.jpg){:.glightbox}
+[![]({{ site.baseurl }}/images/vm-4.jpg)]({{ site.baseurl }}/images/vm-4.jpg){:.glightbox}
 
 As you can see we can get quite a lot of information from our VMware
 vSphere environment by using Zabbix and vPoller.

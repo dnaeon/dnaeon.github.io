@@ -68,7 +68,7 @@ Let's start with the installation of Squid:
 $ cd /usr/ports/www/squid && sudo make install clean
 ```
 
-![_config.yml]({{ site.baseurl }}/images/squid-config.jpg)
+[![]({{ site.baseurl }}/images/squid-config.jpg)]({{ site.baseurl }}/images/squid-config.jpg){:.glightbox}
 
 * SQUID_LDAP_AUTH
 * SQUID_DELAY_POOLS
@@ -382,7 +382,7 @@ using the FreeBSD Ports Collection.
 $ cd /usr/ports/www/dansguardian && sudo make install clean
 ```
 
-![_config.yml]({{ site.baseurl }}/images/dansguardian.jpg)
+[![]({{ site.baseurl }}/images/dansguardian.jpg)]({{ site.baseurl }}/images/dansguardian.jpg){:.glightbox}
 
 Once the installation of DansGuardian is over you should see something
 similiar:

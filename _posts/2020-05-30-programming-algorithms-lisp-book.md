@@ -7,7 +7,7 @@ Today I've got my copy of [Programming
 Algorithms](https://leanpub.com/progalgs), which is a book
 about algorithms and data structures using Lisp.
 
-![_config.yml]({{ site.baseurl }}/images/programming-algorithms-lisp.jpg)
+[![]({{ site.baseurl }}/images/programming-algorithms-lisp.jpg)]({{ site.baseurl }}/images/programming-algorithms-lisp.jpg){:.glightbox}
 
 This book is definitely a good addition to my Lisp books collection,
 which I'm planning to read.

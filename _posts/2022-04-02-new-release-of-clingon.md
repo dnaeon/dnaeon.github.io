@@ -77,7 +77,7 @@ LICENSE:
 
 The `clingon` system version has been bumped to `v0.3.5`.
 
-![_config.yml]({{ site.baseurl }}/images/clingon-zsh-completions.gif)
+[![]({{ site.baseurl }}/images/clingon-zsh-completions.gif)]({{ site.baseurl }}/images/clingon-zsh-completions.gif){:.glightbox}
 
 You can read more about it in the
 [changelog](https://github.com/dnaeon/clingon/blob/master/CHANGELOG.org)

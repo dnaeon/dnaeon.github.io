@@ -66,12 +66,12 @@ click on the *Create template* button.
 Name your template *Template App ZFS* and click the save button as
 shown in the example screenshot below:
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-zfs-1.jpg)
+[![]({{ site.baseurl }}/images/zabbix-zfs-1.jpg)]({{ site.baseurl }}/images/zabbix-zfs-1.jpg){:.glightbox}
 
 Next we create a new application in our template, which is called
 *ZFS Checks*:
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-zfs-2.jpg)
+[![]({{ site.baseurl }}/images/zabbix-zfs-2.jpg)]({{ site.baseurl }}/images/zabbix-zfs-2.jpg){:.glightbox}
 
 Now we are going to create a new item that will be checking our ZFS
 pools, so go to the *Items* tab of your template and click the *Create
@@ -83,7 +83,7 @@ called *zpool.health*, the type of information should be set to
 *Text*. You may also note that we pass an argument to our key
 *zpool.health[zroot]*, which specifies the ZFS pool's name.
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-zfs-3.jpg)
+[![]({{ site.baseurl }}/images/zabbix-zfs-3.jpg)]({{ site.baseurl }}/images/zabbix-zfs-3.jpg){:.glightbox}
 
 Now, it's time to add a trigger for our item. Triggers are the way you
 fire up alarms in Zabbix. Here we are going to create a trigger that
@@ -93,7 +93,7 @@ navigate to the *Triggers* tab of your template and click on the
 
 You can see the trigger we've created on the screenshot below:
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-zfs-4.jpg)
+[![]({{ site.baseurl }}/images/zabbix-zfs-4.jpg)]({{ site.baseurl }}/images/zabbix-zfs-4.jpg){:.glightbox}
 
 The trigger's expression we use in the screenshot above is:
 
@@ -110,14 +110,14 @@ systems, so that you can start monitoring your ZFS pools'
 health. Checking the latest data of our test server we can see that
 our ZFS pool is online:
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-zfs-5.jpg)
+[![]({{ site.baseurl }}/images/zabbix-zfs-5.jpg)]({{ site.baseurl }}/images/zabbix-zfs-5.jpg){:.glightbox}
 
 In order to show you how Zabbix detects problems with our ZFS pools, I
 am going to remove physically one of the disks on my test machine. You
 can see how Zabbix detected the issue right away from the screenshot
 below:
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-zfs-6.jpg)
+[![]({{ site.baseurl }}/images/zabbix-zfs-6.jpg)]({{ site.baseurl }}/images/zabbix-zfs-6.jpg){:.glightbox}
 
 Checking on the server the status of our ZFS pool we can see that the
 *zroot* pool is indeed in degraded state:

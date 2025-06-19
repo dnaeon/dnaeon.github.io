@@ -29,7 +29,7 @@ NIL
 
 The generated animation looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/covid19-global.gif)
+[![]({{ site.baseurl }}/images/covid19-global.gif)]({{ site.baseurl }}/images/covid19-global.gif){:.glightbox}
 
 Another function, which creates animations from time-series data is
 the `COVID19:PLOT-TIME-SERIES-FOR-COUNTRY-ANIMATION`. Here's an
@@ -45,7 +45,7 @@ NIL
 
 The generated animation looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/covid19-it.gif)
+[![]({{ site.baseurl }}/images/covid19-it.gif)]({{ site.baseurl }}/images/covid19-it.gif){:.glightbox}
 
 The `:delay`, `:height`, `:width` and `:line-width` keyword parameters
 can be used to further customize the resulting animation.

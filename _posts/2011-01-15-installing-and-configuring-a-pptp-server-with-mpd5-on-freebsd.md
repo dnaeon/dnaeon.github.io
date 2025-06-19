@@ -38,7 +38,7 @@ $ cd /usr/ports/net/mpd5 && sudo make install clean
 After executing the above command you will see the following screen,
 allowing you to select different options.
 
-![_config.yml]({{ site.baseurl }}/images/mpd5-config.jpg)
+[![]({{ site.baseurl }}/images/mpd5-config.jpg)]({{ site.baseurl }}/images/mpd5-config.jpg){:.glightbox}
 
 fYou can safely leave the options as they are and continue with the
 installation.

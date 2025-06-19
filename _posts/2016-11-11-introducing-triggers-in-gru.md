@@ -59,7 +59,7 @@ $ gructl graph site/code/foo-bar.lua | dot -Tpng -O
 
 The resulting graph looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/gru-foo-bar-dag.png)
+[![]({{ site.baseurl }}/images/gru-foo-bar-dag.png)]({{ site.baseurl }}/images/gru-foo-bar-dag.png){:.glightbox}
 
 Since `file` is a concurrent resource type once we run this code
 we would see the two resources being executed concurrently.
@@ -99,7 +99,7 @@ $ gructl graph site/code/foo-bar.lua | dot -Tpng -O
 
 The new graph representation looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/gru-foo-bar-dag-v2.png)
+[![]({{ site.baseurl }}/images/gru-foo-bar-dag-v2.png)]({{ site.baseurl }}/images/gru-foo-bar-dag-v2.png){:.glightbox}
 
 Here's another, more real-world example of using triggers in
 resources.
@@ -143,7 +143,7 @@ catalog:add(pkg, config, svc)
 
 The resource dependency graph of the above code looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/gru-snmpd-dag.png)
+[![]({{ site.baseurl }}/images/gru-snmpd-dag.png)]({{ site.baseurl }}/images/gru-snmpd-dag.png){:.glightbox}
 
 What is worth noticing in the above example is that now we use
 triggers for the service in a way that any changes in the

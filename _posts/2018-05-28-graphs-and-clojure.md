@@ -49,7 +49,7 @@ nodes of our graph and their values represent their neighbors.
 
 This is how our graph looks like represented visually.
 
-![_config.yml]({{ site.baseurl }}/images/graph.png)
+[![]({{ site.baseurl }}/images/graph.png)]({{ site.baseurl }}/images/graph.png){:.glightbox}
 
 Before we go on and implement the graph traversal algorithms we will
 first define a couple of helper functions to work with.
@@ -140,7 +140,7 @@ When traversing a graph using
 select one of the graph nodes as the root similar to how we do in DFS, and then
 explore the list of neighbors first before we move on to the next level of neighbors.
 
-![_config.yml]({{ site.baseurl }}/images/graph-bfs-levels.png)
+[![]({{ site.baseurl }}/images/graph-bfs-levels.png)]({{ site.baseurl }}/images/graph-bfs-levels.png){:.glightbox}
 
 Looking at the implementation of the `graph-dfs` function that we have implemented
 in the previous section it turns out that we can re-use the code with slight
@@ -195,7 +195,7 @@ we have a task `C` which depends on `B`, and `B` depends on task `A`.
 
 A visual representation of this dependency graph looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/dependency-graph-1.png)
+[![]({{ site.baseurl }}/images/dependency-graph-1.png)]({{ site.baseurl }}/images/dependency-graph-1.png){:.glightbox}
 
 The correct order in which our example workflow would run if we
 have defined the example graph above would be `A -> B -> C`.
@@ -297,7 +297,7 @@ single node in the graph.
 
 But what about the following dependency graph?
 
-![_config.yml]({{ site.baseurl }}/images/dependency-graph-2.png)
+[![]({{ site.baseurl }}/images/dependency-graph-2.png)]({{ site.baseurl }}/images/dependency-graph-2.png){:.glightbox}
 
 Let's take a closer look at node `C` from our graph.
 Node `C` depends on both - nodes `A` and `B` - but it does not provide
@@ -463,7 +463,7 @@ For example if we have a node with two parents - we give higher weight to the on
 we prefer to be sorted before the other. Have a look at the following diagram,
 which uses weights for the edges.
 
-![_config.yml]({{ site.baseurl }}/images/dependency-graph-3.png)
+[![]({{ site.baseurl }}/images/dependency-graph-3.png)]({{ site.baseurl }}/images/dependency-graph-3.png){:.glightbox}
 
 Above dependency graph when topo sorted always resolves to the following
 evaluation order - `B - A - C - D`, because `B` has a path with heigher

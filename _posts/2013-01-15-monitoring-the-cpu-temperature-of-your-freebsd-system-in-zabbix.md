@@ -110,7 +110,7 @@ Now, it is time to add a few items in Zabbix. Navigate to the *Items*
 tab of your template and create a new Zabbix item for getting the
 average CPU temperature as shown on the screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-cpu-temp-1.jpg)
+[![]({{ site.baseurl }}/images/zabbix-cpu-temp-1.jpg)]({{ site.baseurl }}/images/zabbix-cpu-temp-1.jpg){:.glightbox}
 
 Lets create a graph of it as well, so navigate to the *Graphs* tab of
 your template and create a new graph for your new item you've just
@@ -125,9 +125,9 @@ on one of my systems.
 
 Here's how graph of the average CPU temperature looks like:
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-cpu-temp-2.jpg)
+[![]({{ site.baseurl }}/images/zabbix-cpu-temp-2.jpg)]({{ site.baseurl }}/images/zabbix-cpu-temp-2.jpg){:.glightbox}
 
 And this is how the graph of the CPU temperature for all cores looks
 like:
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-cpu-temp-3.jpg)
+[![]({{ site.baseurl }}/images/zabbix-cpu-temp-3.jpg)]({{ site.baseurl }}/images/zabbix-cpu-temp-3.jpg){:.glightbox}

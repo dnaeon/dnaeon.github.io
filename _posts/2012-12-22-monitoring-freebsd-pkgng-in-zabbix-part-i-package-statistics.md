@@ -52,13 +52,13 @@ server and navigate to *Configuration* -> *Templates*, then click on
 the *Create template* button and name your template as *Template App
 PKGNG* and save it.
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part1-1.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part1-1.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part1-1.jpg){:.glightbox}
 
 Next we create a new application in our template, which is called
 *PKGNG Checks*. Navigate to the *Applications* tab of your template
 and create the application as shown in the screenshot below:
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part1-2.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part1-2.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part1-2.jpg){:.glightbox}
 
 Now it is time to add a few *items* in our template, so navigate to
 the *Items* tab of your template and click the *Create item*
@@ -70,11 +70,11 @@ monitoring the number of packages - as the key we use
 *pkg.stats.number*, the type of information is set to *Numeric
 (unsigned)* and units are set to *packages*.
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part1-3.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part1-3.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part1-3.jpg){:.glightbox}
 
 And we will also add another item for monitoring the disk space usage occupied by our packages. On the screenshot below you can see the second item we add - as the key we use *pkg.stats.diskspace* and the type of information is *Numeric (unsigned)*, everything else should be left to the defaults.
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part1-4.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part1-4.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part1-4.jpg){:.glightbox}
 
 Lets create some nice graphs for our items now. Navigate to the
 *Graphs* tab of your template and click the *Create graph*
@@ -84,7 +84,7 @@ it, you've created previously.
 Below you can see a screenshot of the graph we create for the number
 of packages. Create the second graph for the disk space usage as well.
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part1-5.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part1-5.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part1-5.jpg){:.glightbox}
 
 The last thing that you need to do is to attach your *PKGNG Template*
 to your FreeBSD systems and check your graphs.
@@ -93,11 +93,11 @@ I've taken some screenshots of my graphs while I was performing an
 installation of a few packages. Below you can see the graph of disk
 space usage occupied by our packages:
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part1-6.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part1-6.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part1-6.jpg){:.glightbox}
 
 And here's the graph of the number of packages installed on our
 system:
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part1-7.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part1-7.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part1-7.jpg){:.glightbox}
 
 And that was all, folks. Hope you liked it!

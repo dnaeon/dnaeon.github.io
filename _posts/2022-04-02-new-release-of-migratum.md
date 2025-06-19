@@ -6,7 +6,7 @@ tags: common-lisp lisp database schema migration
 A new version of [cl-migratum](https://github.com/dnaeon/cl-migratum) has been
 released.
 
-![_config.yml]({{ site.baseurl }}/images/migratum-demo.gif)
+[![]({{ site.baseurl }}/images/migratum-demo.gif)]({{ site.baseurl }}/images/migratum-demo.gif){:.glightbox}
 
 This release comes with some interesting new features, a summary of
 which you can find below.

@@ -29,7 +29,7 @@ To start the installation execute the command below:
 $ cd /usr/ports/security/openvpn && sudo make install clean
 ```
 
-![_config.yml]({{ site.baseurl }}/images/openvpn-config.jpg)
+[![]({{ site.baseurl }}/images/openvpn-config.jpg)]({{ site.baseurl }}/images/openvpn-config.jpg){:.glightbox}
 
 Once the installation is over you should see something similar:
 

@@ -264,7 +264,7 @@ makefile-graph --makefile examples/Makefile --direction TB | dot -Tsvg -o graph.
 
 And this is what it looks like.
 
-![_config.yml]({{ site.baseurl }}/images/makefile-graph-1.svg)
+[![]({{ site.baseurl }}/images/makefile-graph-1.svg)]({{ site.baseurl }}/images/makefile-graph-1.svg){:.glightbox}
 
 In large enough Makefiles the generated graph may not be easy to understand as
 well, and for that reason `makefile-graph` supports highlighting specific
@@ -284,7 +284,7 @@ makefile-graph \
 
 The results look like this.
 
-![_config.yml]({{ site.baseurl }}/images/makefile-graph-2.svg)
+[![]({{ site.baseurl }}/images/makefile-graph-2.svg)]({{ site.baseurl }}/images/makefile-graph-2.svg){:.glightbox}
 
 And if that is not good enough, we can always focus on a specific target and
 it's dependencies only.
@@ -299,7 +299,7 @@ makefile-graph \
 
 The results look like this.
 
-![_config.yml]({{ site.baseurl }}/images/makefile-graph-3.svg)
+[![]({{ site.baseurl }}/images/makefile-graph-3.svg)]({{ site.baseurl }}/images/makefile-graph-3.svg){:.glightbox}
 
 For additional information and examples, please refer to the
 [dnaeon/makefile-graph](https://github.com/dnaeon/makefile-graph) repo.

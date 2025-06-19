@@ -68,12 +68,12 @@ Navivate to `New Job` and give the new project a meaningful name. In
 this example for the project name I will use the `pkgng-scan-build`
 name as shown on the screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-new-job.jpg)
+[![]({{ site.baseurl }}/images/jenkins-new-job.jpg)]({{ site.baseurl }}/images/jenkins-new-job.jpg){:.glightbox}
 
 Once the new project is created we need to configure it - project
 description, SCM, number of builds to keep, etc.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-description.jpg)
+[![]({{ site.baseurl }}/images/jenkins-description.jpg)]({{ site.baseurl }}/images/jenkins-description.jpg){:.glightbox}
 
 Then we configure the `Source Code Management` section of the project.
 
@@ -91,7 +91,7 @@ I choose to run `scan-build` reports once a week as they tend to be
 quite resource consuming, especially if you run them on a slow
 machine.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-build-triggers.jpg)
+[![]({{ site.baseurl }}/images/jenkins-build-triggers.jpg)]({{ site.baseurl }}/images/jenkins-build-triggers.jpg){:.glightbox}
 
 Now lets configure the build itself. This is where we define how the
 `scan-build` reports are being generated. To do that we configure the
@@ -101,7 +101,7 @@ In order to add the build step click on the `Add build step` button
 from the `Build` section of the project and select the `Execute shell`
 option.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-build-section.jpg)
+[![]({{ site.baseurl }}/images/jenkins-build-section.jpg)]({{ site.baseurl }}/images/jenkins-build-section.jpg){:.glightbox}
 
 The `Build` section of the project is a simple shell script that takes
 care of generating the *scan-build* report.
@@ -173,14 +173,14 @@ fields for publishing the *scan-build* reports.
 
 The `Build` section of the project is a simple shell script that takes
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-post-build.jpg)
+[![]({{ site.baseurl }}/images/jenkins-post-build.jpg)]({{ site.baseurl }}/images/jenkins-post-build.jpg){:.glightbox}
 
 Once ready click on the `Save` button and do a test build of the
 project. Once the project has been succesfully built you will be able
 to access the `scan-build` reports of the project as shown in the
 screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-scan-build-ready.jpg)
+[![]({{ site.baseurl }}/images/jenkins-scan-build-ready.jpg)]({{ site.baseurl }}/images/jenkins-scan-build-ready.jpg){:.glightbox}
 
 And that was it. Now you have a Jenkins project that does continuous
 analyzing of your project codebase using [Clang

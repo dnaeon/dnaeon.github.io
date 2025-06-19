@@ -61,7 +61,7 @@ screen, allowing you to select additional options for vsftpd.
 You can safely leave the options as they are and continue with the
 installation.
 
-![_config.yml]({{ site.baseurl }}/images/vsftpd-config.jpg)
+[![]({{ site.baseurl }}/images/vsftpd-config.jpg)]({{ site.baseurl }}/images/vsftpd-config.jpg){:.glightbox}
 
 Once the installation is over you should see something similar:
 

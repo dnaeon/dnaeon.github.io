@@ -106,4 +106,4 @@ action. From within the web browser we have clicked on a Zip archive
 and as you can see we are able to browse the Zip archive using
 *py-mod_zipper*!
 
-![_config.yml]({{ site.baseurl }}/images/py-mod_zipper.png)
+[![]({{ site.baseurl }}/images/py-mod_zipper.png)]({{ site.baseurl }}/images/py-mod_zipper.png){:.glightbox}

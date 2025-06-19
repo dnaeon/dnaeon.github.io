@@ -39,12 +39,12 @@ For making this I've used one [IR Receiver Diode -
 TSOP38238](https://www.sparkfun.com/products/10266) and the awesome
 [IRremote library](https://github.com/shirriff/Arduino-IRremote).
 
-![_config.yml]({{ site.baseurl }}/images/ir-decoder.png)
+[![]({{ site.baseurl }}/images/ir-decoder.png)]({{ site.baseurl }}/images/ir-decoder.png){:.glightbox}
 
 Once putting everything in it's place I was able to decode my remote
 control IR codes -- the result looked like this:
 
-![_config.yml]({{ site.baseurl }}/images/ir-decoder-ready1.jpg)
+[![]({{ site.baseurl }}/images/ir-decoder-ready1.jpg)]({{ site.baseurl }}/images/ir-decoder-ready1.jpg){:.glightbox}
 
 ## IR Remote Control
 
@@ -57,14 +57,14 @@ LED](https://www.sparkfun.com/products/9349) with the [IRremote
 library](https://github.com/shirriff/Arduino-IRremote) and the IR
 codes I've already decoded for my remote control.
 
-![_config.yml]({{ site.baseurl }}/images/ir-remote.png)
+[![]({{ site.baseurl }}/images/ir-remote.png)]({{ site.baseurl }}/images/ir-remote.png){:.glightbox}
 
 Putting things together on the Arduino and the breadboard and I got my
 Arduino TV remote control! :)
 
 The result looked like this:
 
-![_config.yml]({{ site.baseurl }}/images/ir-remote-ready1.jpg)
+[![]({{ site.baseurl }}/images/ir-remote-ready1.jpg)]({{ site.baseurl }}/images/ir-remote-ready1.jpg){:.glightbox}
 
 ## Next Projects
 

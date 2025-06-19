@@ -117,14 +117,14 @@ more detailed configuration examples please refer to the
 [Jenkins Wiki page](https://wiki.jenkins-ci.org/display/JENKINS/Use+Jenkins)
 for advanced configuration settings.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-main-config.png)
+[![]({{ site.baseurl }}/images/jenkins-main-config.png)]({{ site.baseurl }}/images/jenkins-main-config.png){:.glightbox}
 
 On the above screenshot you can see that we've configured the
 `System Message` and `number of executors` Jenkins will use during builds.
 
 Now let's secure a bit our Jenkins instance:
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-security.png)
+[![]({{ site.baseurl }}/images/jenkins-security.png)]({{ site.baseurl }}/images/jenkins-security.png){:.glightbox}
 
 As you can see from the above screenshot we've configured one user
 with full administrator access to the Jenkins instance and we've
@@ -137,7 +137,7 @@ documentation.
 And the last thing we are going to configure is the `E-mail Notifications`,
 so that we get notification status about the builds.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-mail.png)
+[![]({{ site.baseurl }}/images/jenkins-mail.png)]({{ site.baseurl }}/images/jenkins-mail.png){:.glightbox}
 
 As mentioned earlier this is just a basic configuration of our
 Jenkins CI instance and you are also advised to play a bit with the
@@ -170,13 +170,13 @@ scroll down to the `Git` section
 If you see the `There's no such executable git in PATH: /sbin, /bin, /usr/sbin, /usr/bin.`
 like on the screenshot below you will need to update your path to the Git executable:
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-git-config.png)
+[![]({{ site.baseurl }}/images/jenkins-git-config.png)]({{ site.baseurl }}/images/jenkins-git-config.png){:.glightbox}
 
 As with FreeBSD any software installed that is not part of the base
 system gets installed in `/usr/local`, so you need to update the path
 to the Git executable to `/usr/local/bin/git`.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-git-config-fixed.png)
+[![]({{ site.baseurl }}/images/jenkins-git-config-fixed.png)]({{ site.baseurl }}/images/jenkins-git-config-fixed.png){:.glightbox}
 
 Now that we have the plugins installed and configured, lets create our
 first Jenkins job. To do that navigate to `New Job`, give the job a name
@@ -200,7 +200,7 @@ repository is made.
 
 Once you create a new job in Jenkins you need to configure it.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-job-config-1st.png)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-job-config-1st.png)]({{ site.baseurl }}/images/jenkins-pkgng-job-config-1st.png){:.glightbox}
 
 On the above screenshot we have configured the following things:
 
@@ -212,12 +212,12 @@ The next thing we need to configure is `Source Code Management`.
 This is where we define the remote Git repository,
 the branches we want to build and the repository browser.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-job-config-2nd.png)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-job-config-2nd.png)]({{ site.baseurl }}/images/jenkins-pkgng-job-config-2nd.png){:.glightbox}
 
 Now, lets continue to the `Build Triggers`. The `Build Triggers` tell
 Jenkins when and how a build is being scheduled.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-job-config-3rd.png)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-job-config-3rd.png)]({{ site.baseurl }}/images/jenkins-pkgng-job-config-3rd.png){:.glightbox}
 
 In the screenshot above we tell Jenkins to poll the remote Git
 repository every 30 minutes for new changes.
@@ -232,7 +232,7 @@ meaning a full rebuild of project itself.
 To do that we need to select `Archive for Clone Workspace SCM` in the
 `Post-build Actions` section as shown in the screenshot below:
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-gcc-clone-workspace.png)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-gcc-clone-workspace.png)]({{ site.baseurl }}/images/jenkins-pkgng-gcc-clone-workspace.png){:.glightbox}
 
 And that was it with the configuration of our `upstream project` in
 Jenkins. Now we can configure our `downstream projects` which will
@@ -248,13 +248,13 @@ using GCC and LLVM Clang.
 Navigate to `New Job -> Build a free-style software project` and
 use a project name `pkgng-gcc`.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream.png)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream.png)]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream.png){:.glightbox}
 
 Now we will add the downstream project description,
 max number of builds and Github project just like we did in the
 previous step.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream-description.png)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream-description.png)]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream-description.png){:.glightbox}
 
 Next we do the configuration in the `Source Code Management` section.
 Here we are going to use the workspace of the `upstream pkgng`
@@ -263,7 +263,7 @@ project which we've already archived and now we can use for building.
 In `Source Code Management` select `Clone Workspace` and choose
 `pkgng` as the `Parent Project` as shown in the screenshot below:
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-gcc-clone-workspace.png)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-gcc-clone-workspace.png)]({{ site.baseurl }}/images/jenkins-pkgng-gcc-clone-workspace.png){:.glightbox}
 
 In the `Build Triggers` section we will configure that our project
 gets build after the upstream `pkgng` project is built.
@@ -271,7 +271,7 @@ gets build after the upstream `pkgng` project is built.
 This creates the relation between the upstream and downstream
 projects in Jenkins.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream-build-triggers-after.png)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream-build-triggers-after.png)]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream-build-triggers-after.png){:.glightbox}
 
 Now it is time to define the commands used to perform the actual build
 of the project and that is defined in the `Build` section.
@@ -280,7 +280,7 @@ To do that in the `Build` section we select `Execute shell`
 option define the commands used to build the project as shown in the
 screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream-build-section.png)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream-build-section.png)]({{ site.baseurl }}/images/jenkins-pkgng-gcc-downstream-build-section.png){:.glightbox}
 
 To build the project we just add one line:
 

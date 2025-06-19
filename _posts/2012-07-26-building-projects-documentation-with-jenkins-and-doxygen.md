@@ -68,16 +68,16 @@ Once the plugin is installed we can create our Jenkins project, so
 navigate to `New Job` and give the new job a meaningful name. In this
 example we will call our Jenkins job `pkgng-doc`.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-new-job.jpg)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-new-job.jpg)]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-new-job.jpg){:.glightbox}
 
 Once the new project is created we need to configure it -
 project description, SCM, number of builds to keep, etc.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-description.jpg)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-description.jpg)]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-description.jpg){:.glightbox}
 
 Then we configure the `Source Code Management` section of the project.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-scm.jpg)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-scm.jpg)]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-scm.jpg){:.glightbox}
 
 The next section we configure is the `Build Triggers` one.
 This is where we configure when a project is being scheduled for a
@@ -86,7 +86,7 @@ build.
 In the screenshot below we poll the remote Git repository every 30
 minutes and if there is a new change we schedule a build for it.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-build-triggers.jpg)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-build-triggers.jpg)]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-build-triggers.jpg){:.glightbox}
 
 Now lets configure the build itself. This is where we define how the
 Doxygen documentation is being generated.
@@ -98,7 +98,7 @@ In order to add the build step click on the `Add build step` button
 from the `Build` section of the project and select `Execute shell`
 option.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-build.jpg)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-build.jpg)]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-build.jpg){:.glightbox}
 
 And the last thing we do is to publish our Doxygen documentation
 which we configure in the `Post-build Actions` section of our
@@ -108,7 +108,7 @@ To do that select the `Publish Doxygen` option from the
 `Post-build Actions` section of the project and provide the
 path to the `Doxyfile` of the project as shown in the screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-post-build.jpg)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-post-build.jpg)]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-post-build.jpg){:.glightbox}
 
 When ready click on `Save` button and we are done. Your new project
 should be fully configured and now we can do a test build of it.
@@ -120,7 +120,7 @@ Once the project has been built you can access the Doxygen
 documentation just by click on the `DoxyGen HTML` button as shown in the
 screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-published.jpg)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-published.jpg)]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-published.jpg){:.glightbox}
 
 ### Building the Doxygen documentation using the Jenkins HTML Publisher Plugin
 
@@ -172,7 +172,7 @@ being defined in the `Doxyfile`.
 The below screenshot shows how `pkgng` Doxygen documentation is being
 created.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-publish-html-post-build.jpg)
+[![]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-publish-html-post-build.jpg)]({{ site.baseurl }}/images/jenkins-pkgng-doxygen-publish-html-post-build.jpg){:.glightbox}
 
 Once ready click on `Save` button and do a test build of the project.
 
@@ -180,7 +180,7 @@ Once the project has been succesfully built you will be able to
 access the Doxygen documentation of the project as shown in the
 screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/jenkins-doxygen-ready.jpg)
+[![]({{ site.baseurl }}/images/jenkins-doxygen-ready.jpg)]({{ site.baseurl }}/images/jenkins-doxygen-ready.jpg){:.glightbox}
 
 And that was it. Now you have a Jenkins project that does continuous
 building of the project's documentation. 

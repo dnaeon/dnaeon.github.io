@@ -41,7 +41,7 @@ example MySQL or PostgreSQL, or LDAP, make sure you select the
 corresponding options as well. Otherwise you may safely leave the
 defaults if your only going to server simple HTML pages for example.
 
-![_config.yml]({{ site.baseurl }}/images/apache22-config.jpg)
+[![]({{ site.baseurl }}/images/apache22-config.jpg)]({{ site.baseurl }}/images/apache22-config.jpg){:.glightbox}
 
 When ready select the **OK** button and press **Enter**. The Apache
 installation will start now. Once the installation is over you will
@@ -113,7 +113,7 @@ select **APACHE** in the menu, in order to build an Apache module for
 PHP. You might also want to select the **MULTIBYTE **option in the
 menu.
 
-![_config.yml]({{ site.baseurl }}/images/php5-config.jpg)
+[![]({{ site.baseurl }}/images/php5-config.jpg)]({{ site.baseurl }}/images/php5-config.jpg){:.glightbox}
 
 Once the installation is over you should see something similar:
 

@@ -94,7 +94,7 @@ item. The new item is called *CFEngine LastSeen*, which uses the key
 *cfengine.lastseen* and the type of information is set to
 *Numeric(float)*. See the screenshot below:
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-cfengine-img1.jpg)
+[![]({{ site.baseurl }}/images/zabbix-cfengine-img1.jpg)]({{ site.baseurl }}/images/zabbix-cfengine-img1.jpg){:.glightbox}
 
 Now lets add a trigger for the newly added item. Navigate to the
 *Triggers* tab and create a new trigger. On the screenshot below you
@@ -102,13 +102,13 @@ can see we are defining a trigger for our *CFEngine LastSeen* item
 which will go into alarm if a host hasn't checked-in for more than 24
 hours.
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-cfengine-img2.jpg)
+[![]({{ site.baseurl }}/images/zabbix-cfengine-img2.jpg)]({{ site.baseurl }}/images/zabbix-cfengine-img2.jpg){:.glightbox}
 
 Save the trigger and that was it. From the example screenshot below
 you can see that Zabbix properly catches the hosts that haven't
 checked-in for more than 24 hours.
 
-![_config.yml]({{ site.baseurl }}/images/zabbix-cfengine-img3.jpg)
+[![]({{ site.baseurl }}/images/zabbix-cfengine-img3.jpg)]({{ site.baseurl }}/images/zabbix-cfengine-img3.jpg){:.glightbox}
 
 And that was it. Next time I will try to add a few more Zabbix posts
 which will deal this time with package management and monitoring, so

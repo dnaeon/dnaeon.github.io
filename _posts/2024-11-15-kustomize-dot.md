@@ -240,7 +240,7 @@ produced by `kustomize` and renders a graph of the resources and their origins.
 You can find the code at the
 [dnaeon/kustomize-dot](https://github.com/dnaeon/kustomize-dot) repo.
 
-![_config.yml]({{ site.baseurl }}/images/kustomize-dot-1.svg)
+[![]({{ site.baseurl }}/images/kustomize-dot-1.svg)]({{ site.baseurl }}/images/kustomize-dot-1.svg){:.glightbox}
 
 [dnaeon/kustomize-dot](https://github.com/dnaeon/kustomize-dot) can operate in
 two modes - as a standalone CLI application, or as a [KRM Function
@@ -258,7 +258,7 @@ useful when we want to get a more focused view of the resulting graph.
 This here is the representation of all the resources for [kube-prometheus
 operator](https://github.com/prometheus-operator/kube-prometheus).
 
-![_config.yml]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-full.svg)
+[![]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-full.svg)]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-full.svg){:.glightbox}
 
 The resulting graph is big, and could be confusing as well. In order to focus on
 specific resources (or namespaces) we can ask `kustomize-dot` to filter out the
@@ -278,7 +278,7 @@ The `kube-prometheus.yaml` file can be found in
 
 This is what the result looks like.
 
-![_config.yml]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-1.svg)
+[![]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-1.svg)]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-1.svg){:.glightbox}
 
 We can also apply some highlighting, if needed.
 
@@ -290,7 +290,7 @@ kustomize-dot generate -f kube-prometheus.yaml \
     --highlight-namespace kube-system=yellow
 ```
 
-![_config.yml]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-2.svg)
+[![]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-2.svg)]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-2.svg){:.glightbox}
 
 And here's another example, which drops all `ConfigMap` resources, and keeps
 everything else.
@@ -309,7 +309,7 @@ kustomize-dot generate -f kube-prometheus.yaml \
 
 The result looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-3.svg)
+[![]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-3.svg)]({{ site.baseurl }}/images/kustomize-dot-kube-prometheus-3.svg){:.glightbox}
 
 For additional information and examples, please refer to the
 [dnaeon/kustomize-dot](https://github.com/dnaeon/kustomize-dot) repo.

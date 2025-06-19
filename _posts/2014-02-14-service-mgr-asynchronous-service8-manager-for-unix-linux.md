@@ -21,7 +21,7 @@ The `Service Manager` was built in Python and uses the
 
 The diagram below shows the typical message flow of a service request:
 
-![_config.yml]({{ site.baseurl }}/images/async-service-mgr.jpg)
+[![]({{ site.baseurl }}/images/async-service-mgr.jpg)]({{ site.baseurl }}/images/async-service-mgr.jpg){:.glightbox}
 
 With `Service Manager` you can manage various UNIX/Linux system
 services without having to worry about the underlying methods for

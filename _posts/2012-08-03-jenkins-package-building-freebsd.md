@@ -230,7 +230,7 @@ first.
 To do that navigate to *Manage Jenkins* -> *Configure System* and
 scroll down to the *SSH* section as shown in the screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/ssh-config-1.jpeg)
+[![]({{ site.baseurl }}/images/ssh-config-1.jpeg)]({{ site.baseurl }}/images/ssh-config-1.jpeg){:.glightbox}
 
 In the *SSH* section we need to specify the location to the private
 SSH key used by the Jenkins instance, which in the above screenshot is
@@ -270,7 +270,7 @@ section in Jenkins as shown on the screenshot below. When ready click
 on the *Test Configuration* button to test the connection between
 Jenkins and the *poudriere* builder server.
 
-![_config.yml]({{ site.baseurl }}/images/ssh-config-2.jpeg)
+[![]({{ site.baseurl }}/images/ssh-config-2.jpeg)]({{ site.baseurl }}/images/ssh-config-2.jpeg){:.glightbox}
 
 If the test was successful as shown on the screenshot above click on
 the *Save* button and we are ready with the configuration of the
@@ -284,17 +284,17 @@ builds. Navigate to *New Job* and give the new project a meaningful
 name. In this example for the project name I will use the
 *freebsd-9.0-amd64-builder* name as shown on the screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/new-job.jpeg)
+[![]({{ site.baseurl }}/images/new-job.jpeg)]({{ site.baseurl }}/images/new-job.jpeg){:.glightbox}
 
 Once the new project is created we need to configure it - project
 description, SCM, number of builds to keep, etc.
 
-![_config.yml]({{ site.baseurl }}/images/job-description-job.jpeg)
+[![]({{ site.baseurl }}/images/job-description-job.jpeg)]({{ site.baseurl }}/images/job-description-job.jpeg){:.glightbox}
 
 We do not use an SCM system, so we leave the *Source Code Management*
 section of the project empty.
 
-![_config.yml]({{ site.baseurl }}/images/scmjpeg)
+[![]({{ site.baseurl }}/images/scmjpeg)]({{ site.baseurl }}/images/scmjpeg){:.glightbox}
 
 The next section we configure is the *Build Triggers* one. This is
 where we configure when a project is being scheduled for a build. I
@@ -302,7 +302,7 @@ choose to leave this section of the project empty and trigger a build
 manually, but you may wish to enable periodic builds if needed. Feel
 free to play with this section of the project.
 
-![_config.yml]({{ site.baseurl }}/images/build-triggers.jpeg)
+[![]({{ site.baseurl }}/images/build-triggers.jpeg)]({{ site.baseurl }}/images/build-triggers.jpeg){:.glightbox}
 
 Now lets configure the build itself. This is where we define how we
 trigger the *poudriere* builds. To do that we configure the *Build*
@@ -316,7 +316,7 @@ Then select the *poudriere-builder* server and in the *Exec command*
 field we specify the commands used for building the packages as shown
 in the screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/build-section.jpeg)
+[![]({{ site.baseurl }}/images/build-section.jpeg)]({{ site.baseurl }}/images/build-section.jpeg){:.glightbox}
 
 The *Build* section of the project is a simple shell script that takes
 care of building our packages with *poudriere*.
@@ -370,14 +370,14 @@ Now lets configure the *Advanced* settings of our project, to do that
 click on the Advanced* button and check the *Fail the build if an
 error occurs* as shown in the screenshot below:
 
-![_config.yml]({{ site.baseurl }}/images/build-section-2.jpeg)
+[![]({{ site.baseurl }}/images/build-section-2.jpeg)]({{ site.baseurl }}/images/build-section-2.jpeg){:.glightbox}
 
 One last thing we need to configure in the *Build* section of our
 project is to check the *Exec in pty* option and set the *Exec
 timeout* as shown in the screenshot below. We set the *Exec timeout*
 to *0* as we don't know how long a build is going to last.
 
-![_config.yml]({{ site.baseurl }}/images/build-in-pty.jpeg)
+[![]({{ site.baseurl }}/images/build-in-pty.jpeg)]({{ site.baseurl }}/images/build-in-pty.jpeg){:.glightbox}
 
 The last thing we need to configure about our project is to sync the
 already built packages back to Jenkins so that we can make them
@@ -389,13 +389,13 @@ In the *Post-build Actions* section of your project click on the
 set of scripts* then from the *Build steps* select *Execute shell* as
 shown in the screenshot below:
 
-![_config.yml]({{ site.baseurl }}/images/post-build-select-build-step.jpeg)
+[![]({{ site.baseurl }}/images/post-build-select-build-step.jpeg)]({{ site.baseurl }}/images/post-build-select-build-step.jpeg){:.glightbox}
 
 Our shell script in the *Post-build Actions* section only serves for
 syncing the packages from the build server to the Jenkins instance and
 is configured as shown on the screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/post-build-rsync-script.jpeg)
+[![]({{ site.baseurl }}/images/post-build-rsync-script.jpeg)]({{ site.baseurl }}/images/post-build-rsync-script.jpeg){:.glightbox}
 
 The sync script used in the *Post-build Actions* section is listed
 below:
@@ -448,13 +448,13 @@ You can monitor the output of the package building by clicking on the
 Example screenshots of Jenkins building packages with *poudriere* can
 be seen below.
 
-![_config.yml]({{ site.baseurl }}/images/in-action-1.jpeg)
+[![]({{ site.baseurl }}/images/in-action-1.jpeg)]({{ site.baseurl }}/images/in-action-1.jpeg){:.glightbox}
 
 Once the packages have been built you will be able to browse them and
 view the log files when you go to the project's *Workspace* as shown
 on the screenshot below.
 
-![_config.yml]({{ site.baseurl }}/images/workspace.jpeg)
+[![]({{ site.baseurl }}/images/workspace.jpeg)]({{ site.baseurl }}/images/workspace.jpeg){:.glightbox}
 
 As you can see from the above screenshot we now have a ready-to-use
 *pkgng* repository and can install packages right away, e.g.

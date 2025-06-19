@@ -28,7 +28,7 @@ install Tinderbox.
 $ cd /usr/ports/ports-mgmt/tinderbox-devel && sudo make install clean
 ```
 
-![_config.yml]({{ site.baseurl }}/images/tinderbox-config.jpg)
+[![]({{ site.baseurl }}/images/tinderbox-config.jpg)]({{ site.baseurl }}/images/tinderbox-config.jpg){:.glightbox}
 
 NOTE: Please, note that `lsof(8)` option requires that you have the
 kernel sources to be present on your system.

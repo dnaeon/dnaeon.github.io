@@ -11,7 +11,7 @@ options named [clingon](https://github.com/dnaeon/clingon).
 Starting with `clingon` version `0.3.0` we now have support for
 generating Zsh completions for our command-line apps.
 
-![_config.yml]({{ site.baseurl }}/images/clingon-zsh-completions.gif)
+[![]({{ site.baseurl }}/images/clingon-zsh-completions.gif)]({{ site.baseurl }}/images/clingon-zsh-completions.gif){:.glightbox}
 
 You can read more about the [shell
 completions](https://github.com/dnaeon/clingon#shell-completions)

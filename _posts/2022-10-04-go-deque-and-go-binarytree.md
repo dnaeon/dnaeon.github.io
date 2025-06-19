@@ -225,4 +225,4 @@ dot -Tsvg /path/to/file.dot -o /tmp/to/file.svg
 
 And here's how our tree looks like.
 
-![_config.yml]({{ site.baseurl }}/images/go-binarytree.svg)
+[![]({{ site.baseurl }}/images/go-binarytree.svg)]({{ site.baseurl }}/images/go-binarytree.svg){:.glightbox}

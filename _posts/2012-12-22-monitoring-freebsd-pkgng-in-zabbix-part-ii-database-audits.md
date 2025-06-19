@@ -49,13 +49,13 @@ you know already what it will check for.
 Here's a screenshot of our new *pkgng* item in Zabbix. The key we use
 here is *pkg.check.deps*:
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part2-1.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part2-1.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part2-1.jpg){:.glightbox}
 
 Lets add another item to our template, which will check our packages
 against the vulnerability database for known issues. The key we use
 for this item is *pkg.audit* as shown in the screenshot below:
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part2-2.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part2-2.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part2-2.jpg){:.glightbox}
 
 Okay, items added. What's next?
 
@@ -67,7 +67,7 @@ a new trigger. The first trigger we set is for missing package
 dependencies, and you can see on the screenshot below how we configure
 it:
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part2-3.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part2-3.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part2-3.jpg){:.glightbox}
 
 For the name of the trigger we use:
 
@@ -84,7 +84,7 @@ And the trigger's expression we use is:
 Now lets add a second trigger for the vulnerability checks. Here's a
 screenshot of the trigger:
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part2-4.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part2-4.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part2-4.jpg){:.glightbox}
 
 And here's the trigger's expression we've used:
 
@@ -95,7 +95,7 @@ And here's the trigger's expression we've used:
 We are now ready with the Zabbix setup. Lets check if Zabbix has
 something to tell us looking at the Dashboard.
 
-![_config.yml]({{ site.baseurl }}/images/pkgng-zabbix-part2-5.jpg)
+[![]({{ site.baseurl }}/images/pkgng-zabbix-part2-5.jpg)]({{ site.baseurl }}/images/pkgng-zabbix-part2-5.jpg){:.glightbox}
 
 As you can see from the above screenshot Zabbix has detected packages
 with missing dependencies and it also identified one package that is

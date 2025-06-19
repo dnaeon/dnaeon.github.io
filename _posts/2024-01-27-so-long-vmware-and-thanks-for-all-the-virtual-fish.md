@@ -6,7 +6,7 @@ tags: vmware broadcom
 For the last ~ 11 years of my professional life I have been with the VMware
 family.
 
-![_config.yml]({{ site.baseurl }}/images/vmware/me-palo-alto-2013.jpg)
+[![]({{ site.baseurl }}/images/vmware/me-palo-alto-2013.jpg)]({{ site.baseurl }}/images/vmware/me-palo-alto-2013.jpg){:.glightbox}
 
 These years have been a great journey for me, but unfortunately every journey
 must come to an end at some point.
@@ -59,11 +59,11 @@ I had the pleasure and honour to work alongside some of the best and smartest
 folks in the industry, learn from them and become friends with them. And I am
 grateful for being part of such a team. I am going to miss these folks a lot.
 
-![_config.yml]({{ site.baseurl }}/images/vmware/team-dinner-raketa-2023.jpg)
+[![]({{ site.baseurl }}/images/vmware/team-dinner-raketa-2023.jpg)]({{ site.baseurl }}/images/vmware/team-dinner-raketa-2023.jpg){:.glightbox}
 
 A picture of the team in the VMware office in Bulgaria, Sofia.
 
-![_config.yml]({{ site.baseurl }}/images/vmware/team-in-the-office-2022.jpg)
+[![]({{ site.baseurl }}/images/vmware/team-in-the-office-2022.jpg)]({{ site.baseurl }}/images/vmware/team-in-the-office-2022.jpg){:.glightbox}
 
 It is sad to me to say this, but after 11 years I have decided to move on. After
 Broadcom acquired VMware, things are never going to be the same, and I can
@@ -79,30 +79,30 @@ travelling on business (thank you VMware!), which bring some good memories.
 
 My first visit to San Francisco, California, 2013.
 
-![_config.yml]({{ site.baseurl }}/images/vmware/me-cali-1-2013.jpg)
+[![]({{ site.baseurl }}/images/vmware/me-cali-1-2013.jpg)]({{ site.baseurl }}/images/vmware/me-cali-1-2013.jpg){:.glightbox}
 
-![_config.yml]({{ site.baseurl }}/images/vmware/me-cali-2-2013.jpg)
+[![]({{ site.baseurl }}/images/vmware/me-cali-2-2013.jpg)]({{ site.baseurl }}/images/vmware/me-cali-2-2013.jpg){:.glightbox}
 
 Rocky Mountains, Colorado, 2016.
 
-![_config.yml]({{ site.baseurl }}/images/vmware/me-colorado-1-2016.jpg)
+[![]({{ site.baseurl }}/images/vmware/me-colorado-1-2016.jpg)]({{ site.baseurl }}/images/vmware/me-colorado-1-2016.jpg){:.glightbox}
 
 Trying to push that rock ...
 
-![_config.yml]({{ site.baseurl }}/images/vmware/me-colorado-2-2016.jpg)
+[![]({{ site.baseurl }}/images/vmware/me-colorado-2-2016.jpg)]({{ site.baseurl }}/images/vmware/me-colorado-2-2016.jpg){:.glightbox}
 
 Going back to Cali in 2019.
 
-![_config.yml]({{ site.baseurl }}/images/vmware/me-sf-2019.jpg)
+[![]({{ site.baseurl }}/images/vmware/me-sf-2019.jpg)]({{ site.baseurl }}/images/vmware/me-sf-2019.jpg){:.glightbox}
 
 Me and my friend Vanyo while we present our poster at the VMware R&D Innovation
 Offsite (Radio) in San Francisco, 2019.
 
-![_config.yml]({{ site.baseurl }}/images/vmware/sf-radio-2019.jpg)
+[![]({{ site.baseurl }}/images/vmware/sf-radio-2019.jpg)]({{ site.baseurl }}/images/vmware/sf-radio-2019.jpg){:.glightbox}
 
 Some stats about me and how long I've been with VMware.
 
-![_config.yml]({{ site.baseurl }}/images/vmware/mnikolov-slack-stats.png)
+[![]({{ site.baseurl }}/images/vmware/mnikolov-slack-stats.png)]({{ site.baseurl }}/images/vmware/mnikolov-slack-stats.png){:.glightbox}
 
 And finally I want to wish all the best to my colleagues and friends at VMware,
 and I really hope our paths cross again! Keep rocking folks, and till next time!

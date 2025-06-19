@@ -36,7 +36,7 @@ in Quicklisp.
 And here's a demo of the command-line application provided by the
 `cl-wol.cli` system.
 
-![_config.yml]({{ site.baseurl }}/images/cl-wol-demo.gif)
+[![]({{ site.baseurl }}/images/cl-wol-demo.gif)]({{ site.baseurl }}/images/cl-wol-demo.gif){:.glightbox}
 
 Make sure to check the [cl-wol](https://github.com/dnaeon/cl-wol) repo
 for additional examples and information.

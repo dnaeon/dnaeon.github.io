@@ -22,7 +22,7 @@ tricks, which hopefully will find it's place in your sysadmin toolkit
 
 Let's first see the tools we are going to talk about in this post.
 
-![_config.yml]({{ site.baseurl }}/images/vcli-all-tools.jpg)
+[![]({{ site.baseurl }}/images/vcli-all-tools.jpg)]({{ site.baseurl }}/images/vcli-all-tools.jpg){:.glightbox}
 
 As you can see from the above screenshot we have a pretty decent
 number of vSphere CLI tools which we can use. Now let's see some of
@@ -33,11 +33,11 @@ them in action.
 This is how you could get the vSphere version and build numbers from a
 vSphere host from the command-line:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-about-1.jpg)
+[![]({{ site.baseurl }}/images/vcli-about-1.jpg)]({{ site.baseurl }}/images/vcli-about-1.jpg){:.glightbox}
 
 Wait, we can even request more info if we ask to:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-about-2.jpg)
+[![]({{ site.baseurl }}/images/vcli-about-2.jpg)]({{ site.baseurl }}/images/vcli-about-2.jpg){:.glightbox}
 
 Pretty useful, isn't it? :)
 
@@ -48,24 +48,24 @@ vSphere environment.
 
 This is how we can discover all datacenters for example:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-datacenter-discover.jpg)
+[![]({{ site.baseurl }}/images/vcli-datacenter-discover.jpg)]({{ site.baseurl }}/images/vcli-datacenter-discover.jpg){:.glightbox}
 
 What ESXi hosts do we have in our environment:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-host-discover.jpg)
+[![]({{ site.baseurl }}/images/vcli-host-discover.jpg)]({{ site.baseurl }}/images/vcli-host-discover.jpg){:.glightbox}
 
 Okay, that's good. We have one ESXi host in our environment, but what
 is it's power state?
 
-![_config.yml]({{ site.baseurl }}/images/vcli-host-discover-2.jpg)
+[![]({{ site.baseurl }}/images/vcli-host-discover-2.jpg)]({{ site.baseurl }}/images/vcli-host-discover-2.jpg){:.glightbox}
 
 What about our datastores?
 
-![_config.yml]({{ site.baseurl }}/images/vcli-datastore-discover-1.jpg)
+[![]({{ site.baseurl }}/images/vcli-datastore-discover-1.jpg)]({{ site.baseurl }}/images/vcli-datastore-discover-1.jpg){:.glightbox}
 
 Let's see the datastore URLs as well:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-datastore-discover-2.jpg)
+[![]({{ site.baseurl }}/images/vcli-datastore-discover-2.jpg)]({{ site.baseurl }}/images/vcli-datastore-discover-2.jpg){:.glightbox}
 
 As you can see we can *virtually* discover any vSphere managed object
 in our environment. What we can also do is during discovery we can
@@ -83,35 +83,35 @@ Sure, it is! :)
 Let's see what is the capacity and free space of our `datastore1`
 datastore:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-datastore-get.jpg)
+[![]({{ site.baseurl }}/images/vcli-datastore-get.jpg)]({{ site.baseurl }}/images/vcli-datastore-get.jpg){:.glightbox}
 
 Okay, seems like our datastore is in good shape and is accessible.
 
 Let's see what is the amount of memory on our ESXi host and it's
 status:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-host-get.jpg)
+[![]({{ site.baseurl }}/images/vcli-host-get.jpg)]({{ site.baseurl }}/images/vcli-host-get.jpg){:.glightbox}
 
 Let's see what disks do we have on a Virtual Machine:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-vm-disk-discover.jpg)
+[![]({{ site.baseurl }}/images/vcli-vm-disk-discover.jpg)]({{ site.baseurl }}/images/vcli-vm-disk-discover.jpg){:.glightbox}
 
 And what is the capacity and free space of the `/storage/db` file
 system:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-vm-disk-get_0.jpg)
+[![]({{ site.baseurl }}/images/vcli-vm-disk-get_0.jpg)]({{ site.baseurl }}/images/vcli-vm-disk-get_0.jpg){:.glightbox}
 
 Let's find out on which host this Virtual Machine is running on:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-vm-host-get_0.jpg)
+[![]({{ site.baseurl }}/images/vcli-vm-host-get_0.jpg)]({{ site.baseurl }}/images/vcli-vm-host-get_0.jpg){:.glightbox}
 
 And what are the datastores used by this Virtual Machine:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-vm-datastore-get_0.jpg)
+[![]({{ site.baseurl }}/images/vcli-vm-datastore-get_0.jpg)]({{ site.baseurl }}/images/vcli-vm-datastore-get_0.jpg){:.glightbox}
 
 Let's also check the network configuration for our Virtual Machine:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-vm-net-discover.jpg)
+[![]({{ site.baseurl }}/images/vcli-vm-net-discover.jpg)]({{ site.baseurl }}/images/vcli-vm-net-discover.jpg){:.glightbox}
 
 This is just a fraction of the properties you can get out of your
 VMware vSphere environment. For all the properties you can get please
@@ -122,7 +122,7 @@ documentation](https://www.vmware.com/support/developer/vc-sdk/).
 
 Let's see what is the latest event registered in our vCenter server:
 
-![_config.yml]({{ site.baseurl }}/images/vcli-event.jpg)
+[![]({{ site.baseurl }}/images/vcli-event.jpg)]({{ site.baseurl }}/images/vcli-event.jpg){:.glightbox}
 
 Okay, we can also see the events from our vCenter from the
 command-line, which I find as cool! :)

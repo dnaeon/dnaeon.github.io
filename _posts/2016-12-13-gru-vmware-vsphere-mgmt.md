@@ -202,7 +202,7 @@ $ gructl graph site/code/vsphere.lua | dot -Tpng -O
 
 The resulting DAG graph looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/gru-vsphere-resources-dag.png)
+[![]({{ site.baseurl }}/images/gru-vsphere-resources-dag.png)]({{ site.baseurl }}/images/gru-vsphere-resources-dag.png){:.glightbox}
 
 What is worth mentioning about Gru is that it is good in executing
 operations concurrently. Looking at the above dependency graph we can

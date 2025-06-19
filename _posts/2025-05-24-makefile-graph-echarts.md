@@ -39,7 +39,7 @@ makefile-graph \
 
 The command above will generate an HTML document, which you can save and open.
 
-![_config.yml]({{ site.baseurl }}/images/makefile-graph-echarts-white.gif)
+[![]({{ site.baseurl }}/images/makefile-graph-echarts-white.gif)]({{ site.baseurl }}/images/makefile-graph-echarts-white.gif){:.glightbox}
 
 If you want to use a different theme (e.g. `dark`, `vintage`, etc.) you can
 specify the Echarts theme using the `--theme` option. The font size and style
@@ -55,7 +55,7 @@ makefile-graph \
     --format echarts
 ```
 
-![_config.yml]({{ site.baseurl }}/images/makefile-graph-echarts-dark.gif)
+[![]({{ site.baseurl }}/images/makefile-graph-echarts-dark.gif)]({{ site.baseurl }}/images/makefile-graph-echarts-dark.gif){:.glightbox}
 
 For additional information and examples, please refer to the
 [dnaeon/makefile-graph](https://github.com/dnaeon/makefile-graph) repo.

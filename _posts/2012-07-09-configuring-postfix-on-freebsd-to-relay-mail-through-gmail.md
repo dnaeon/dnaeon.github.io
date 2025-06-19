@@ -44,7 +44,7 @@ To install Postfix execute the command below:
 $ sudo make -C /usr/ports/mail/postfix install clean
 ```
 
-![_config.yml]({{ site.baseurl }}/images/postfix-config_0.jpg)
+[![]({{ site.baseurl }}/images/postfix-config_0.jpg)]({{ site.baseurl }}/images/postfix-config_0.jpg){:.glightbox}
 
 Make sure to select the `SASL2` and `TLS` options from the
 configuration menu.

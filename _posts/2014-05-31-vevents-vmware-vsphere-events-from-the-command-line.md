@@ -35,7 +35,7 @@ VMware vSphere Events from the command-line.
 First we configure our VMware vSphere host with `vConnector`, so that
 `vEvents` can connect to our VMware vSphere host.
 
-![_config.yml]({{ site.baseurl }}/images/vconnector-cli.jpg)
+[![]({{ site.baseurl }}/images/vconnector-cli.jpg)]({{ site.baseurl }}/images/vconnector-cli.jpg){:.glightbox}
 
 For more information about `vConnector` and how to use it, please
 refer to the [vConnector Github repository
@@ -44,7 +44,7 @@ documentation](https://github.com/dnaeon/py-vconnector).
 Having our VMware vSphere host registered in the `vConnector` database
 we can now fire up `vEvents` and monitoring our VMware vSphere Events.
 
-![_config.yml]({{ site.baseurl }}/images/vevents-cli.jpg)
+[![]({{ site.baseurl }}/images/vevents-cli.jpg)]({{ site.baseurl }}/images/vevents-cli.jpg){:.glightbox}
 
 For more information and updates of `vEvents`, please refer to the
 [vEvents Github repository](https://github.com/dnaeon/py-vevents).

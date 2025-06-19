@@ -214,7 +214,7 @@ NIL
 
 The graph looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/covid19-bg-filledcurves.png)
+[![]({{ site.baseurl }}/images/covid19-bg-filledcurves.png)]({{ site.baseurl }}/images/covid19-bg-filledcurves.png){:.glightbox}
 
 Above graph uses `filled curves`, but we can plot the graph using a different
 template, if needed.
@@ -229,7 +229,7 @@ NIL
 
 This is how the graph looks like when we use the different template.
 
-![_config.yml]({{ site.baseurl }}/images/covid19-bg-lines.png)
+[![]({{ site.baseurl }}/images/covid19-bg-lines.png)]({{ site.baseurl }}/images/covid19-bg-lines.png){:.glightbox}
 
 Another plot function that can be used is `COVID19:PLOT-TIME-SERIES-GLOBAL`.
 
@@ -240,7 +240,7 @@ NIL
 
 The generated graph on a global scale looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/covid19-global-filledcurves.png)
+[![]({{ site.baseurl }}/images/covid19-global-filledcurves.png)]({{ site.baseurl }}/images/covid19-global-filledcurves.png){:.glightbox}
 
 The `COVID19:PLOT-TOP-COUNTRIES-BY` function can be used to plot countries
 by sorting them first on a given column. Here's an example to plot a histogram
@@ -253,7 +253,7 @@ NIL
 
 The generated graph looks like this.
 
-![_config.yml]({{ site.baseurl }}/images/covid19-top-by-confirmed.png)
+[![]({{ site.baseurl }}/images/covid19-top-by-confirmed.png)]({{ site.baseurl }}/images/covid19-top-by-confirmed.png){:.glightbox}
 
 Another template that we can use to plot some graphs using the new
 cases on daily basis is
@@ -270,7 +270,7 @@ NIL
 The generated graph looks like this, which shows the new cases on
 daily basis.
 
-![_config.yml]({{ site.baseurl }}/images/covid19-it-new-cases.png)
+[![]({{ site.baseurl }}/images/covid19-it-new-cases.png)]({{ site.baseurl }}/images/covid19-it-new-cases.png){:.glightbox}
 
 For more examples, make sure to check the
 [cl-covid19](https://github.com/dnaeon/cl-covid19) repo.

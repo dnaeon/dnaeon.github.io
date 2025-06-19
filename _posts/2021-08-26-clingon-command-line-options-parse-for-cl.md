@@ -100,7 +100,7 @@ the ones found in Go and Python. That would be my contribution to the
 Common Lisp community. This is how
 [clingon](https://github.com/dnaeon/clingon) was born.
 
-![_config.yml]({{ site.baseurl }}/images/clingon-demo.gif)
+[![]({{ site.baseurl }}/images/clingon-demo.gif)]({{ site.baseurl }}/images/clingon-demo.gif){:.glightbox}
 
 And here's a summary of the features supported by the `clingon` as of
 writing this post.

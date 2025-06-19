@@ -15,7 +15,7 @@ Managed Entities, e.g. manage Datacenters and Clusters, create
 Virtual Machines, launch consoles to Virtual Machines, manage
 datastores on ESXi hosts, view and acknowledge alarms and many more.
 
-![_config.yml]({{ site.baseurl }}/images/pvc-screenshot.jpg)
+[![]({{ site.baseurl }}/images/pvc-screenshot.jpg)]({{ site.baseurl }}/images/pvc-screenshot.jpg){:.glightbox}
 
 You can get PVC from the
 [PVC Github repository](https://github.com/dnaeon/pvc) and from the

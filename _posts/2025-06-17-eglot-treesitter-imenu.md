@@ -27,7 +27,7 @@ it's complementary packages) build on top of the standard Emacs APIs such as
 (and not only that), which looks great when working with with Elisp code. Here's
 an example.
 
-![_config.yml]({{ site.baseurl }}/images/consult-imenu-elisp.png)
+[![]({{ site.baseurl }}/images/consult-imenu-elisp.png)]({{ site.baseurl }}/images/consult-imenu-elisp.png){:.glightbox}
 
 You get a nice menu with entries grouped by `types`, `functions`, `variables`,
 etc. You can also narrow down the search for entries of specific kind, e.g. when
@@ -38,7 +38,7 @@ At `$WORK` I'm primary working on Go code these days, and one thing I've noticed
 when using `M-x consult-imenu` is that the results are less impressive when
 compared to the Elisp code.
 
-![_config.yml]({{ site.baseurl }}/images/consult-imenu-eglot-imenu.png)
+[![]({{ site.baseurl }}/images/consult-imenu-eglot-imenu.png)]({{ site.baseurl }}/images/consult-imenu-eglot-imenu.png){:.glightbox}
 
 As you can see the results are nowhere near to what `M-x consult-imenu` displays
 for Elisp code.
@@ -247,7 +247,7 @@ review the AST tree as you go by using `M-x treesit-explore-mode`.
 
 This is what the AST looks like for our sample Go program.
 
-![_config.yml]({{ site.baseurl }}/images/treesit-explore-mode.png)
+[![]({{ site.baseurl }}/images/treesit-explore-mode.png)]({{ site.baseurl }}/images/treesit-explore-mode.png){:.glightbox}
 
 So, after spending some time configuring `treesit-simple-imenu-settings` with
 the help of `M-x treesit-explore-mode` here's what my current config looks like.
@@ -342,7 +342,7 @@ My updated `go-ts-mode` config looks like this.
 
 Here's how it looks like with the sample Go program shown before.
 
-![_config.yml]({{ site.baseurl }}/images/consult-imenu-treesit.png)
+[![]({{ site.baseurl }}/images/consult-imenu-treesit.png)]({{ site.baseurl }}/images/consult-imenu-treesit.png){:.glightbox}
 
 Things look much better now, and the index generation happens much faster,
 because it relies on `tree-sitter` only.

@@ -22,7 +22,7 @@ each performing a different task:
 On the diagram below you can view the principal work of the *vPoller*
 distributed system:
 
-![_config.yml]({{ site.baseurl }}/images/vPoller-diagram.jpg)
+[![]({{ site.baseurl }}/images/vPoller-diagram.jpg)]({{ site.baseurl }}/images/vPoller-diagram.jpg){:.glightbox}
 
 The distributed nature of vPoller is provided by
 [ZeroMQ](http://zeromq.org/), which also load balances client requests
@@ -248,7 +248,7 @@ On the screenshot below you can see how we send a request to our
 connected to the Proxy. Once the request is processed by our `vPoller
 Workers` result is sent back to the client in JSON format.
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-discover-esxi-hosts.jpg)
+[![]({{ site.baseurl }}/images/vpoller-discover-esxi-hosts.jpg)]({{ site.baseurl }}/images/vpoller-discover-esxi-hosts.jpg){:.glightbox}
 
 The returned result shows that we have only a single ESXi host
 registered to our vCenter server instance.
@@ -265,7 +265,7 @@ On the screenshot below you can see the request we send to our
 `vPoller Proxy` and the result returned to the client from the
 `vPoller Workers`.
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-discover-datastores.jpg)
+[![]({{ site.baseurl }}/images/vpoller-discover-datastores.jpg)]({{ site.baseurl }}/images/vpoller-discover-datastores.jpg){:.glightbox}
 
 The returned result shows us all datastores that we have on our
 vCenter server instance.
@@ -283,17 +283,17 @@ for different properties of our vSphere Objects.
 Example request to get the power state of an ESXi host. The property
 we want to retrieve is `runtime.powerState`.
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-poll-esxi-powerstate.jpg)
+[![]({{ site.baseurl }}/images/vpoller-poll-esxi-powerstate.jpg)]({{ site.baseurl }}/images/vpoller-poll-esxi-powerstate.jpg){:.glightbox}
 
 What amout of memory do we have on our ESXi host? The property we want
 to retrieve is `hardware.memorySize`.
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-poll-esxi-memorysize.jpg)
+[![]({{ site.baseurl }}/images/vpoller-poll-esxi-memorysize.jpg)]({{ site.baseurl }}/images/vpoller-poll-esxi-memorysize.jpg){:.glightbox}
 
 Let's see what was the time our ESXi hosts booted. The property we
 want to retrieve is `runtime.bootTime`.
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-poll-esxi-boottime.jpg)
+[![]({{ site.baseurl }}/images/vpoller-poll-esxi-boottime.jpg)]({{ site.baseurl }}/images/vpoller-poll-esxi-boottime.jpg){:.glightbox}
 
 Okay, let's poll some properties now about datastores. Using the
 discovery information we got previously we will now see how to get
@@ -302,17 +302,17 @@ various information about our datastores.
 What is the capacity of our datastore? The property we want to
 retrieve is `summary.capacity`.
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-poll-datastore-capacity.jpg)
+[![]({{ site.baseurl }}/images/vpoller-poll-datastore-capacity.jpg)]({{ site.baseurl }}/images/vpoller-poll-datastore-capacity.jpg){:.glightbox}
 
 What is the name of our datastore? The property we want ot retrieve is
 `info.name`.
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-poll-datastore-name.jpg)
+[![]({{ site.baseurl }}/images/vpoller-poll-datastore-name.jpg)]({{ site.baseurl }}/images/vpoller-poll-datastore-name.jpg){:.glightbox}
 
 Let's see the amount of free space we have on our datastore. The
 property we want to retrieve is `info.freeSpace`.
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-poll-datastore-freespace.jpg)
+[![]({{ site.baseurl }}/images/vpoller-poll-datastore-freespace.jpg)]({{ site.baseurl }}/images/vpoller-poll-datastore-freespace.jpg){:.glightbox}
 
 Again you are advised to check the [vSphere API online
 documentation](https://www.vmware.com/support/developer/vc-sdk/) for
@@ -327,12 +327,12 @@ your `Proxy` or `Worker`.
 This is how you could get status information from your `vPoller
 Proxy`:
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-proxy-status.jpg)
+[![]({{ site.baseurl }}/images/vpoller-proxy-status.jpg)]({{ site.baseurl }}/images/vpoller-proxy-status.jpg){:.glightbox}
 
 And this is how you could get status information from your `vPoller
 Workers`:
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-worker-status_0.jpg)
+[![]({{ site.baseurl }}/images/vpoller-worker-status_0.jpg)]({{ site.baseurl }}/images/vpoller-worker-status_0.jpg){:.glightbox}
 
 The management interface of `vPoller Proxy` and `Worker` also accepts
 commands for shutting down the components.
@@ -340,12 +340,12 @@ commands for shutting down the components.
 This is how you could shutdown your `vPoller Proxy` by sending a
 `shutdown` message to your node:
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-proxy-shutdown.jpg)
+[![]({{ site.baseurl }}/images/vpoller-proxy-shutdown.jpg)]({{ site.baseurl }}/images/vpoller-proxy-shutdown.jpg){:.glightbox}
 
 And this is how you could shutdown your `vPoller Worker` by sending a
 `shutdown` message to your nodes:
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-worker-shutdown.jpg)
+[![]({{ site.baseurl }}/images/vpoller-worker-shutdown.jpg)]({{ site.baseurl }}/images/vpoller-worker-shutdown.jpg){:.glightbox}
 
 You can also perform these operations using the `init.d` scripts from
 the [vPoller Github repository](https://github.com/dnaeon/py-vpoller).
@@ -376,7 +376,7 @@ and return property values ready to be used in Zabbix items.
 Let's see how the discovery of datastores looks like if we the *Zabbix
 vPoller Helper*:
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-zabbix-helper-discover-datastores.jpg)
+[![]({{ site.baseurl }}/images/vpoller-zabbix-helper-discover-datastores.jpg)]({{ site.baseurl }}/images/vpoller-zabbix-helper-discover-datastores.jpg){:.glightbox}
 
 The result is returned in [Zabbix LLD
 format](https://www.zabbix.com/documentation/2.2/manual/discovery/low_level_discovery)
@@ -385,7 +385,7 @@ format which is useful for creating *discovery items* in Zabbix.
 This is how things look like if we try to poll a property using the
 `vpoller.helpers.zabbix` helper:
 
-![_config.yml]({{ site.baseurl }}/images/vpoller-zabbix-helper-datastore-poll.jpg)
+[![]({{ site.baseurl }}/images/vpoller-zabbix-helper-datastore-poll.jpg)]({{ site.baseurl }}/images/vpoller-zabbix-helper-datastore-poll.jpg){:.glightbox}
 
 As you can see we only got the result value of our property which
 makes it useful for using in items, which require a single value to be

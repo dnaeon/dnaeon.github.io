@@ -140,7 +140,7 @@ if __name__ == '__main__':
 
 And here is the result from our script:
 
-![_config.yml]({{ site.baseurl }}/images/esx-cpu-usage.png)
+[![]({{ site.baseurl }}/images/esx-cpu-usage.png)]({{ site.baseurl }}/images/esx-cpu-usage.png){:.glightbox}
 
 Wait, it would be really usefuly if could see what is the CPU usage
 compared to our total CPU resources. Can we do that?
@@ -220,7 +220,7 @@ if __name__ == '__main__':
 
 And here is what the result looks like:
 
-![_config.yml]({{ site.baseurl }}/images/esx-cpu-usage-2.png)
+[![]({{ site.baseurl }}/images/esx-cpu-usage-2.png)]({{ site.baseurl }}/images/esx-cpu-usage-2.png){:.glightbox}
 
 Pretty nice, isn't it? Now we can get an overview of how our ESXi
 hosts are performing.
@@ -293,7 +293,7 @@ if __name__ == '__main__':
 
 And here is the result from our script:
 
-![_config.yml]({{ site.baseurl }}/images/datastores.png)
+[![]({{ site.baseurl }}/images/datastores.png)]({{ site.baseurl }}/images/datastores.png){:.glightbox}
 
 From the graph above we can see that some datastores would require
 attention soon, as we are running out of free disk space :)
@@ -368,7 +368,7 @@ if __name__ == '__main__':
 
 And here is the result from our script:
 
-![_config.yml]({{ site.baseurl }}/images/vms-tools-state.png)
+[![]({{ site.baseurl }}/images/vms-tools-state.png)]({{ site.baseurl }}/images/vms-tools-state.png){:.glightbox}
 
 Oh boy, seems like we do have a significant number of Virtual Machines
 that we need to take care of and get VMware Tools up and running
@@ -443,4 +443,4 @@ if __name__ == '__main__':
 
 And this is how the result from our script looks like:
 
-![_config.yml]({{ site.baseurl }}/images/vms-os-types.png)
+[![]({{ site.baseurl }}/images/vms-os-types.png)]({{ site.baseurl }}/images/vms-os-types.png){:.glightbox}
