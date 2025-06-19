@@ -16,23 +16,30 @@ it such as [marginalia](https://github.com/minad/marginalia),
 [orderless](https://github.com/oantolin/orderless).
 
 So far I've been pretty happy with the transition. `eglot` and `vertico` feel
-snappy and more responsive than `lsp-mode` and `helm`.
+snappy and more responsive than `lsp-mode` and `helm`. And `marginalia` is great
+as well, because it provides nice annotations next to your completion
+candidates.
 
 Also, `eglot` is part of Emacs for quite some time already, and `vertico` (and
 it's complementary packages) build on top of the standard Emacs APIs such as
 `completing-read`, which is another good reason to stick with them.
 
-[consult](https://github.com/minad/consult) provides an interface to
+[consult](https://github.com/minad/consult) provides search and navigation
+commands, and also comes with support for (amongst other things)
 [imenu](https://www.gnu.org/software/emacs/manual/html_node/elisp/Imenu.html)
-(and not only that), which looks great when working with with Elisp code. Here's
-an example.
+via `M-x consult-imenu`.
+
+`consult` and `marginalia` pair nicely together. Here's an example of `M-x
+consult-imenu` displaying the symbols for an Elisp buffer, which look great. The
+extra annotations next to each completion candidate are provided by `marginalia`
+itself.
 
 [![]({{ site.baseurl }}/images/consult-imenu-elisp.png)]({{ site.baseurl }}/images/consult-imenu-elisp.png){:.glightbox}
 
-You get a nice menu with entries grouped by `types`, `functions`, `variables`,
+You get a nice menu with entries grouped by `Types`, `Functions`, `Variables`,
 etc. You can also narrow down the search for entries of specific kind, e.g. when
-you want to browse the `functions` only simply type `f SPC` in the
-`consult-imenu` prompt and it will give you only the function definitions.
+you want to browse the `functions` only, simply type `f SPC` in the
+`consult-imenu` prompt and it will give you the function definitions only.
 
 At `$WORK` I'm primary working on Go code these days, and one thing I've noticed
 when using `M-x consult-imenu` is that the results are less impressive when
@@ -40,8 +47,8 @@ compared to the Elisp code.
 
 [![]({{ site.baseurl }}/images/consult-imenu-eglot-imenu.png)]({{ site.baseurl }}/images/consult-imenu-eglot-imenu.png){:.glightbox}
 
-As you can see the results are nowhere near to what `M-x consult-imenu` displays
-for Elisp code.
+As you can see the results are nowhere near to what `M-x consult-imenu`
+(enriched by `marginalia`) displays for Elisp code.
 
 In this post we will see how to make `M-x consult-imenu` look better when
 working with Go code (or any other language with `tree-sitter` support).
@@ -55,12 +62,12 @@ I kept digging.
 So, what turned out to be the issue for me, is that `eglot` provides it's own
 [imenu-create-index-function](https://www.gnu.org/software/emacs/manual/html_node/elisp/Imenu.html#index-imenu_002dcreate_002dindex_002dfunction)
 called `eglot-imenu`, which actually wraps `treesit-simple-imenu`, and
-`treesit-simple-imenu` is tree-sitters approach to building the `imenu` index.
+`treesit-simple-imenu` is tree-sitter's approach to building the `imenu` index.
 
 Here's what the value of `imenu-create-index-function` looks like, when set by
 `eglot`.
 
-Use `C-h v imenu-create-index-function` (or `M-x describe-variable imenu-create-index-function`.
+Use `C-h v imenu-create-index-function` (or `M-x describe-variable imenu-create-index-function`).
 
 ``` emacs-lisp
 imenu-create-index-function is a variable defined in ‘imenu.el’.
@@ -262,10 +269,10 @@ the help of `M-x treesit-explore-mode` here's what my current config looks like.
   ;; global scope, if the `var_declaration' node belongs to a parent node of
   ;; type `source_file'.
   (let* ((var-declaration (treesit-parent-until
-                          node
-                          (lambda (item)
-                            (string-equal (treesit-node-type item) "var_declaration"))
-                          t))
+                           node
+                           (lambda (item)
+                             (string-equal (treesit-node-type item) "var_declaration"))
+                           t))
          (var-declaration-parent (treesit-node-parent var-declaration)))
     (string-equal (treesit-node-type var-declaration-parent) "source_file")))
 
@@ -275,10 +282,10 @@ the help of `M-x treesit-explore-mode` here's what my current config looks like.
   ;; global scope, if the `const_declaration' node belongs to a parent node of
   ;; type `source_file'.
   (let* ((const-declaration (treesit-parent-until
-                          node
-                          (lambda (item)
-                            (string-equal (treesit-node-type item) "const_declaration"))
-                          t))
+                             node
+                             (lambda (item)
+                               (string-equal (treesit-node-type item) "const_declaration"))
+                             t))
          (const-declaration-parent (treesit-node-parent const-declaration)))
     (string-equal (treesit-node-type const-declaration-parent) "source_file")))
 
@@ -303,6 +310,7 @@ the help of `M-x treesit-explore-mode` here's what my current config looks like.
       (t (treesit-node-text package-name)))))
 
 (defun my/treesit-simple-imenu-settings ()
+  (setq-local imenu-max-item-length 200)
   (setq-local imenu-index-create-function #'treesit-simple-imenu)
   (setq-local treesit-simple-imenu-settings
               '(("Imports" "\\`import_spec\\'" nil my/go-ts-import-node-name)
@@ -344,5 +352,6 @@ Here's how it looks like with the sample Go program shown before.
 
 [![]({{ site.baseurl }}/images/consult-imenu-treesit.png)]({{ site.baseurl }}/images/consult-imenu-treesit.png){:.glightbox}
 
-Things look much better now, and the index generation happens much faster,
+Things look much better now. We have various categories such as `Imports`,
+`Functions`, `Variables`, etc. And the index generation happens much faster now,
 because it relies on `tree-sitter` only.
