@@ -384,6 +384,16 @@ The script expects the following env vars to be provided.
 - `ORG_ROAM_DIR` - directory, which contains your `org-roam` notes
 - `ORG_ROAM_DB` - path to the `org-roam` database
 
+In order to run the script either `export` the env vars, or pass them using
+`env`, e.g.
+
+``` shell
+env HUGO_BASE_DIR=/path/to/hugo \
+    ORG_ROAM_DIR=/path/to/org-notes \
+    ORG_ROAM_DB=/path/to/org-roam.db \
+    export-roam-notes-to-hugo.el
+```
+
 Upon successful completion it will generate the following directories.
 
 - `$HUGO_BASE_DIR/content/notes` - contains the generated Markdown files
