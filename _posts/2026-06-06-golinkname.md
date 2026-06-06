@@ -192,8 +192,8 @@ It is also worth noting here that recent Go versions (> 1.23.x) come with
 tightened up restrictions about using `linkname` directive when linking to a
 symbol in the stdlib. See the following links for additional information.
 
-- https://go.dev/doc/go1.23#linker
-- https://github.com/golang/go/issues/67401
+- <https://go.dev/doc/go1.23#linker>
+- <https://github.com/golang/go/issues/67401>
 
 In order to fill that gap and be able to navigate through all the `linkname`
 symbols in the stdlib I've built a tool for this purpose only.
