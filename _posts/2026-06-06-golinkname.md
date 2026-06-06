@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Discoverying and navigating through Go linkname compiler directives
+title: Discovering and navigating through Go linkname compiler directives
 tags: compiler golang go linkname
 ---
 
