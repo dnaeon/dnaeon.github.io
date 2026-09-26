@@ -1,6 +1,6 @@
 ---
 layout: post
-title: makefile-graph with Apache Echarts support
+title: makefile-graph with Apache ECharts support
 tags: graph gnu make dot graphviz echarts
 ---
 
